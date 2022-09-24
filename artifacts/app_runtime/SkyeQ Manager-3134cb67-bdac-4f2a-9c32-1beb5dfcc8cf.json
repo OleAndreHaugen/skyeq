@@ -32,6 +32,13 @@
 							"translation": []
 						},
 						{
+							"attribute": "floatingFooter",
+							"grouping": "Properties",
+							"value": "true",
+							"script": "",
+							"translation": []
+						},
+						{
 							"attribute": "enableScrolling",
 							"grouping": "Properties",
 							"value": "false",
@@ -1187,6 +1194,82 @@
 									]
 								}
 							]
+						},
+						{
+							"fieldNo": "90f4a049-5fec-47de-a2f7-e600b4805c05",
+							"fieldName": "oBar",
+							"fieldParent": "13093192-aa35-43d2-874c-c9ec345f6b6b",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setFooter",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "8a3fa9bd-cf72-4373-fb19-500099116841",
+									"fieldName": "Right",
+									"fieldParent": "90f4a049-5fec-47de-a2f7-e600b4805c05",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentRight",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "1bdfe295-163d-4d70-a882-a2e150721f3e",
+											"fieldName": "oButton",
+											"fieldParent": "8a3fa9bd-cf72-4373-fb19-500099116841",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Emphasized",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Update",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "apiGetData()",
+													"script": "apiGetData()",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
 						}
 					]
 				}
@@ -1325,7 +1408,7 @@
 			"data": []
 		}
 	],
-	"ver": "22.9.24.1628",
+	"ver": "22.9.24.1647",
 	"application": "skyeq_manager",
 	"title": "SkyeQ Manager",
 	"description": "SkyeQ Manager",

@@ -29,9 +29,9 @@
 	"foreignKeys": [],
 	"name": "skyequeue_status",
 	"description": "SkyeQ: Status",
-	"ver": "22.9.24.152",
+	"ver": "22.9.24.1655",
 	"enableAudit": false,
-	"includeDataInPackage": false,
+	"includeDataInPackage": true,
 	"package": "de916930-7bab-4416-b294-24cae145feab",
 	"rolesRead": [],
 	"rolesWrite": []
