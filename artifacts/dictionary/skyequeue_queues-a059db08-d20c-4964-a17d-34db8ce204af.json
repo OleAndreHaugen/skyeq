@@ -1,0 +1,23 @@
+{
+	"id": "a059db08-d20c-4964-a17d-34db8ce204af",
+	"createdAt": "2022-09-24T09:41:29.482Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"fields": [
+		{
+			"id": "cf8adecb-9539-4095-deb9-f06918b7b282",
+			"fieldName": "name",
+			"fieldType": "smalltext",
+			"description": "Name"
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "skyequeue_queues",
+	"description": "SkyeQ: Queues",
+	"ver": "22.9.24.1146",
+	"enableAudit": false,
+	"includeDataInPackage": false,
+	"package": "de916930-7bab-4416-b294-24cae145feab",
+	"rolesRead": [],
+	"rolesWrite": []
+}

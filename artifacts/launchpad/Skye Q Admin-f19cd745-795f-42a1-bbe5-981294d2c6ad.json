@@ -1,0 +1,88 @@
+{
+	"id": "f19cd745-795f-42a1-bbe5-981294d2c6ad",
+	"createdAt": "2022-09-24T09:57:34.387Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"extUserRoles": [],
+	"extUserDepartments": [],
+	"catOrder": [
+		"132c2e25-4d86-461e-a802-36a2f01618f1"
+	],
+	"layout": [
+		{
+			"id": "7bdc1632-122c-412d-8a35-6272003a9e1e",
+			"css": "",
+			"name": "Default",
+			"active": true,
+			"style": [
+				"==OBJECT STRING==",
+				"<style>.nepPage { background: rgba(0, 0, 0, 0.4); }",
+				"        .nepShell {",
+				"            background-image: url('https://bing.biturl.top/?resolution=1920&format=image') !important;",
+				"            background-repeat: no-repeat;",
+				"            background-size: cover;",
+				"        }",
+				"    .nepCatTitle.sapMTitle { color: white; }.nepCatSubTitle.sapMTitle { color: white !important; }</style>"
+			],
+			"pageBackgroundImage": "https://bing.biturl.top/?resolution=1920&format=image",
+			"pageBackgroundColor": "rgba(0, 0, 0, 0.4)",
+			"textTitleColor": "white",
+			"textSubTitleColor": "white"
+		}
+	],
+	"config": {
+		"enhancement": "",
+		"showAppTitle": true
+	},
+	"enhancement": [],
+	"name": "Skye Q Admin",
+	"title": "Skye Q Admin",
+	"description": null,
+	"startApp": null,
+	"startWebApp": null,
+	"customLogo": null,
+	"launchpadApp": "planet9_launchpad_standard",
+	"hideSidemenu": false,
+	"ui5Version": "1.102",
+	"ui5Theme": "sap_horizon_dark",
+	"header": null,
+	"customTheme": null,
+	"isExternal": null,
+	"emailPattern": null,
+	"loginApp": null,
+	"enableNotifications": false,
+	"firebaseProjectId": null,
+	"firebaseAppId": null,
+	"defaultLoginIDP": null,
+	"publicAccess": false,
+	"css": null,
+	"clientRequestTimeout": 120,
+	"limitWidth": false,
+	"searchBackgroundType": null,
+	"searchBackgroundColor": null,
+	"searchBackgroundShade": null,
+	"usedBackgroundType": null,
+	"usedBackgroundColor": null,
+	"usedBackgroundShade": null,
+	"searchEnableShadeCalc": null,
+	"usedEnableShadeCalc": null,
+	"enableTrace": false,
+	"ver": "22.9.24.959",
+	"pwa_enable": false,
+	"pwa_customImageIos": null,
+	"pwa_customImageAndroidOld": null,
+	"pwa_customImageAndroidNew": null,
+	"pwa_displayMode": null,
+	"pwa_themeColor": null,
+	"pwa_backgroundColor": null,
+	"passwordResetEmail": null,
+	"activationCodeEmail": null,
+	"package": "de916930-7bab-4416-b294-24cae145feab",
+	"cat": [
+		{
+			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
+			"name": "Skye Q",
+			"title": "Skye Q",
+			"ver": "22.9.24.1010"
+		}
+	]
+}

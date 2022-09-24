@@ -1,0 +1,197 @@
+{
+	"id": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
+	"createdAt": "2022-09-24T08:27:00.641Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "89f8d932-be8b-4ed8-92cc-a00b7e196cfc",
+			"method": "POST",
+			"path": "/start",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "fc436f99-8799-49f5-af3b-101a1abfdb24"
+		},
+		{
+			"id": "4d7abdce-bff7-4e5e-ac8b-95d18338ec52",
+			"method": "GET",
+			"path": "/status",
+			"description": "",
+			"parameters": [
+				{
+					"name": "id",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				}
+			],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "cfd65f6d-7788-4e24-a5d4-c11b00f051c5"
+		},
+		{
+			"id": "972ce652-f500-4e44-b4cf-4c40a7de7e64",
+			"method": "DELETE",
+			"path": "/leave",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "10dbea76-347c-40c1-8035-89b6afde4688"
+		},
+		{
+			"id": "fd49aef6-3ba4-4643-f251-5bd15b40e292",
+			"method": "GET",
+			"path": "/masterdata",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [
+				{
+					"id": "df5ae6b6-4365-4565-bff0-f97d06204104",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "afe0f952-50d1-4cee-d3ad-1435acad7edc",
+							"name": "masterdata",
+							"objectType": "array"
+						}
+					]
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "79f556cb-4373-451c-b627-40632b332f69"
+		}
+	],
+	"definitions": [
+		{
+			"id": "b57f5d23-df07-48e4-c6c9-da0eff1f3818",
+			"name": "masterdata",
+			"description": "",
+			"isInclude": false,
+			"properties": [
+				{
+					"id": "0692bf1c-866a-44f2-beba-6ec710fdc718",
+					"name": "id",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "1adf1005-e47c-437a-a0d1-0ab2c62cef43",
+					"name": "createdAt",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "ee278913-cb7f-42b0-f9e8-2027b6434b46",
+					"name": "updatedAt",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "2ee83c62-a643-49a5-c052-0715ab837c9d",
+					"name": "createdBy",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "a161ea15-4563-476b-96ba-89e2b30dc250",
+					"name": "updatedBy",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "3a61066b-b1cc-4468-bd89-80cf14838fd0",
+					"name": "name",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "SkyeQ Client",
+	"endpoint": "/public/serverscript/skyeqclient",
+	"ver": "22.9.24.1013",
+	"version": null,
+	"description": null,
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "script",
+	"about": null,
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": true,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "de916930-7bab-4416-b294-24cae145feab",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}

@@ -1,0 +1,17 @@
+{
+	"id": "943c8773-5a10-4497-9642-337dd0283544",
+	"createdAt": "2022-09-24T09:42:41.466Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"tableid": "a059db08-d20c-4964-a17d-34db8ce204af",
+		"hasDocumentation": false
+	},
+	"documentation": {},
+	"name": "SkyeQ: Queues",
+	"description": null,
+	"group": null,
+	"type": "T",
+	"ver": "22.9.24.942",
+	"disabled": false,
+	"package": "de916930-7bab-4416-b294-24cae145feab"
+}

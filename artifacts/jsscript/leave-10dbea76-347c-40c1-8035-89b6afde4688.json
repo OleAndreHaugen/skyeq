@@ -1,0 +1,50 @@
+{
+	"id": "10dbea76-347c-40c1-8035-89b6afde4688",
+	"createdAt": "2022-09-24T09:23:22.304Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
+			"name": "skyequeue",
+			"contextname": "skyequeue"
+		}
+	],
+	"apis": [],
+	"name": "leave",
+	"ver": "22.9.24.935",
+	"description": null,
+	"content": [
+		"==OBJECT STRING==",
+		"try {\r",
+		"\r",
+		"    await entities.skyequeue.delete({\r",
+		"        id: req.query.id\r",
+		"    });\r",
+		"\r",
+		"    result.data = {\r",
+		"        status: \"Deleted\"\r",
+		"    };\r",
+		"\r",
+		"    complete();\r",
+		"\r",
+		"} catch (e) {\r",
+		"\r",
+		"    result.data = {\r",
+		"        status: \"Error\",\r",
+		"        description: e\r",
+		"    };\r",
+		"\r",
+		"    complete();\r",
+		"\r",
+		"}\r",
+		""
+	],
+	"useAsGlobalScript": false,
+	"isTypescript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": true,
+	"jsscriptGroup": "3b0bf60c-66aa-41c4-8f02-34988872c104",
+	"package": "de916930-7bab-4416-b294-24cae145feab"
+}

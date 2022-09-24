@@ -1,0 +1,170 @@
+{
+	"id": "de916930-7bab-4416-b294-24cae145feab",
+	"createdAt": "2022-09-24T07:28:19.176Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/OleAndreHaugen/skyeq.git",
+		"testServers": [],
+		"packageJSON": [
+			"==OBJECT STRING==",
+			"{",
+			"  \"name\": \"com.neptune.skyeq\",",
+			"  \"version\": \"1.0.0\",",
+			"  \"description\": \"Skye Q\",",
+			"  \"author\": \"Neptune Software\",",
+			"  \"license\": \"LicenseRef-LICENSE\",",
+			"  \"private\": true,",
+			"  \"scripts\": {",
+			"    \"deploy\": \"ts-node src/deploy.ts\",",
+			"    \"test\": \"jest --passWithNoTests\"",
+			"  },",
+			"  \"engines\": {",
+			"    \"node\": \"18\"",
+			"  },",
+			"  \"devDependencies\": {",
+			"    \"@types/jest\": \"^26.0.23\",",
+			"    \"typescript\": \"^4.2.3\",",
+			"    \"ts-node\": \"^10.0.0\",",
+			"    \"axios\": \"^0.21.1\",",
+			"    \"jest\": \"^27.0.4\",",
+			"    \"ts-jest\": \"^27.0.3\"",
+			"  }",
+			"}",
+			""
+		]
+	},
+	"name": "com.neptune.skyeq",
+	"description": "Skye Q",
+	"ver": "22.9.24.1023",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "b07e1be4-e5eb-4b2a-a372-c51d5e99cbdd",
+			"application": "skyeq_client",
+			"title": "",
+			"description": "Skye Q"
+		}
+	],
+	"api": [
+		{
+			"id": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
+			"name": "SkyeQ Client",
+			"description": null,
+			"apiGroup": null
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [
+		{
+			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
+			"name": "skyequeue_queues",
+			"description": "SkyeQ: Queues"
+		},
+		{
+			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
+			"name": "skyequeue",
+			"description": null
+		}
+	],
+	"jsclass": [
+		{
+			"id": "fc436f99-8799-49f5-af3b-101a1abfdb24",
+			"name": "start",
+			"description": null
+		},
+		{
+			"id": "cfd65f6d-7788-4e24-a5d4-c11b00f051c5",
+			"name": "status",
+			"description": null
+		},
+		{
+			"id": "10dbea76-347c-40c1-8035-89b6afde4688",
+			"name": "leave",
+			"description": null
+		},
+		{
+			"id": "79f556cb-4373-451c-b627-40632b332f69",
+			"name": "masterdata",
+			"description": null
+		}
+	],
+	"jsscript_group": [
+		{
+			"id": "3b0bf60c-66aa-41c4-8f02-34988872c104",
+			"name": "SkyeQ",
+			"description": null
+		}
+	],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [
+		{
+			"id": "8dfc29f8-81a4-4196-8e22-2785dae978f2",
+			"name": "skyeq_master",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "8e2f3971-1f31-4bba-b24a-fc095bd2a6a3",
+			"name": "skyeq_queues",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		}
+	],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [
+		{
+			"id": "7905de68-88e6-4efe-88ea-21b23d3827e3",
+			"description": null,
+			"name": "Skye Q Master"
+		},
+		{
+			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
+			"description": null,
+			"name": "Skye Q Queues"
+		}
+	],
+	"category": [
+		{
+			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
+			"description": null,
+			"name": "Skye Q"
+		}
+	],
+	"launchpad": [
+		{
+			"id": "284e5787-00d1-4c46-acdb-64583ceada2e",
+			"name": "SkyeQ",
+			"description": null
+		},
+		{
+			"id": "f19cd745-795f-42a1-bbe5-981294d2c6ad",
+			"name": "Skye Q Admin",
+			"description": null
+		}
+	],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [
+		{
+			"id": "ab76d4de-10e1-4e5d-9bb4-8d218798996a",
+			"name": "SkyeQ: Queue",
+			"description": null
+		},
+		{
+			"id": "943c8773-5a10-4497-9642-337dd0283544",
+			"name": "SkyeQ: Queues",
+			"description": null
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"id": "79f556cb-4373-451c-b627-40632b332f69",
+	"createdAt": "2022-09-24T10:10:41.082Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
+			"name": "skyequeue_queues",
+			"contextname": "skyequeue_queues"
+		}
+	],
+	"apis": [],
+	"name": "masterdata",
+	"ver": "22.9.24.1011",
+	"description": null,
+	"content": [
+		"==OBJECT STRING==",
+		"try {\r",
+		"\r",
+		"    result.data = await entities.skyequeue_queues.find();\r",
+		"\r",
+		"    complete();\r",
+		"\r",
+		"} catch (e) {\r",
+		"\r",
+		"    result.data = {\r",
+		"        status: \"Error\",\r",
+		"        description: e\r",
+		"    };\r",
+		"\r",
+		"    complete();\r",
+		"}\r",
+		"\r",
+		""
+	],
+	"useAsGlobalScript": false,
+	"isTypescript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"jsscriptGroup": "3b0bf60c-66aa-41c4-8f02-34988872c104",
+	"package": "de916930-7bab-4416-b294-24cae145feab"
+}
