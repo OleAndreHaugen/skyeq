@@ -23,13 +23,34 @@
 			"fieldType": "smalltext",
 			"description": "Queue",
 			"isNullable": true
+		},
+		{
+			"id": "03f88876-d525-4fe3-82e7-59b87af499e4",
+			"fieldName": "phone",
+			"fieldType": "mediumtext",
+			"description": "Phone",
+			"isNullable": true
+		},
+		{
+			"id": "5aed35cc-dc2b-4265-aaa5-661e3b7e1c26",
+			"fieldName": "email",
+			"fieldType": "mediumtext",
+			"isNullable": true,
+			"description": "eMail"
+		},
+		{
+			"id": "f07ae7f2-56a9-4fad-88c2-4292b84a1663",
+			"fieldName": "note",
+			"fieldType": "text",
+			"isNullable": true,
+			"description": "Note"
 		}
 	],
 	"indices": [],
 	"foreignKeys": [],
 	"name": "skyequeue",
-	"description": null,
-	"ver": "22.9.24.1046",
+	"description": "SkyeQ: Master",
+	"ver": "22.9.24.1443",
 	"enableAudit": false,
 	"includeDataInPackage": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab",

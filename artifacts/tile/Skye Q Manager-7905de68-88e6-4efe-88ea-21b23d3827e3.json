@@ -6,16 +6,17 @@
 	"storeItem": {},
 	"settings": {
 		"adaptive": {
-			"id": "8dfc29f8-81a4-4196-8e22-2785dae978f2"
+			"id": "8dfc29f8-81a4-4196-8e22-2785dae978f2",
+			"idTile": "51feb17f-5732-4b57-990b-9d65f4afac60"
 		}
 	},
-	"title": "Skye Q Master",
+	"title": "Skye Q Manager",
 	"subTitle": "Queues",
 	"description": null,
 	"categoryID": null,
 	"sort": null,
 	"urlApplication": null,
-	"actionApplication": "",
+	"actionApplication": "skyeq_manager",
 	"actionParameters": null,
 	"actionURL": "",
 	"openDialog": false,
@@ -23,7 +24,7 @@
 	"openFullscreen": false,
 	"forceRow": false,
 	"frameType": null,
-	"type": null,
+	"type": "adaptive",
 	"image": null,
 	"icon": null,
 	"backgroundType": null,
@@ -37,8 +38,8 @@
 	"hideTileMobile": false,
 	"hideTileTablet": false,
 	"enableDocumentation": false,
-	"navObject": null,
-	"navAction": null,
+	"navObject": "skyeq",
+	"navAction": "manager",
 	"dialogWidth": null,
 	"dialogHeight": null,
 	"tileApplicationStyleClass": null,
@@ -60,10 +61,10 @@
 	"helpText": null,
 	"helpEnabled": false,
 	"openClickTile": false,
-	"ver": "22.9.24.959",
+	"ver": "22.9.24.1421",
 	"actionWebApp": "",
-	"name": "Skye Q Master",
-	"cardWidth": null,
+	"name": "Skye Q Manager",
+	"cardWidth": "Medium",
 	"cardHeight": null,
 	"cardHeightFit": false,
 	"cardImage": null,
@@ -78,7 +79,7 @@
 	"bodyHeight": null,
 	"roleTag": null,
 	"sapICFNode": null,
-	"actionType": "F",
+	"actionType": "A",
 	"package": "de916930-7bab-4416-b294-24cae145feab",
 	"roles": []
 }

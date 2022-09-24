@@ -1,0 +1,38 @@
+{
+	"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
+	"createdAt": "2022-09-24T10:37:25.657Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"fields": [
+		{
+			"id": "41ff872d-ac56-4e70-9950-9c02ef3fabc0",
+			"fieldName": "status",
+			"fieldType": "integer",
+			"description": "Status",
+			"isNullable": true
+		},
+		{
+			"id": "9c13b35c-7604-4935-9b96-1999999c7dd0",
+			"fieldName": "name",
+			"fieldType": "mediumtext",
+			"description": "Name",
+			"isNullable": true
+		},
+		{
+			"id": "408218d9-85d9-4b4d-b0c0-e7b5f5639d7b",
+			"fieldName": "state",
+			"fieldType": "mediumtext",
+			"description": "State",
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "skyequeue_status",
+	"description": "SkyeQ: Status",
+	"ver": "22.9.24.152",
+	"enableAudit": false,
+	"includeDataInPackage": false,
+	"package": "de916930-7bab-4416-b294-24cae145feab",
+	"rolesRead": [],
+	"rolesWrite": []
+}

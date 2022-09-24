@@ -1,0 +1,17 @@
+{
+	"id": "25d7e073-d923-48d0-91a2-7a0db8ed03e7",
+	"createdAt": "2022-09-24T10:37:58.687Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"tableid": "7eb1387e-c27c-4a18-b763-ce884649aa63",
+		"hasDocumentation": false
+	},
+	"documentation": {},
+	"name": "SkyeQ: Status",
+	"description": null,
+	"group": null,
+	"type": "T",
+	"ver": "22.9.24.1037",
+	"disabled": false,
+	"package": "de916930-7bab-4416-b294-24cae145feab"
+}

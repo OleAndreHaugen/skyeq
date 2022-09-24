@@ -26,8 +26,8 @@
 					"attributes": [],
 					"data": [
 						{
-							"fieldNo": "7cae32b8-dc97-45be-a236-23cbcba21b53",
-							"fieldName": "oPageScan",
+							"fieldNo": "c0634df8-25b5-4d81-eb6f-0f7c2ba66391",
+							"fieldName": "oPageStart",
 							"fieldParent": "dab7719e-56f0-4785-d592-70d0f2962233",
 							"fieldType": "sap.m.Page",
 							"script": "",
@@ -39,6 +39,375 @@
 									"attribute": "showHeader",
 									"grouping": "Properties",
 									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "floatingFooter",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "backgroundDesign",
+									"grouping": "Properties",
+									"value": "Transparent",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "c82da5c5-de29-4c72-84c8-7e5c53a9d8ba",
+									"fieldName": "oPanel",
+									"fieldParent": "c0634df8-25b5-4d81-eb6f-0f7c2ba66391",
+									"fieldType": "sap.m.Panel",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "backgroundDesign",
+											"grouping": "Properties",
+											"value": "Transparent",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "7788292b-d164-4b6b-9b50-743fe4e366cf",
+											"fieldName": "oGridList",
+											"fieldParent": "c82da5c5-de29-4c72-84c8-7e5c53a9d8ba",
+											"fieldType": "sap.f.GridList",
+											"script": "",
+											"customComponent": false,
+											"bindingValue": "SkyeQ Client>masterdata",
+											"bindingType": "h",
+											"bindingSource": "API",
+											"bindingParentID": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
+											"bindingPathID": "b57f5d23-df07-48e4-c6c9-da0eff1f3818",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "dc089f3f-f2c9-4103-a97e-22e472558e85",
+													"fieldName": "oGridListItem",
+													"fieldParent": "7788292b-d164-4b6b-9b50-743fe4e366cf",
+													"fieldType": "sap.f.GridListItem",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Active",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"const context = oEvent.oSource.getBindingContext();  \r",
+																"const data = context.getObject();\r",
+																"SkyeQ.queue = data;\r",
+																"oApp.to(oPageUser);"
+															],
+															"language": "javascript",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "7234e32c-4a67-4501-c568-01d3e118bfa4",
+															"fieldName": "navListPanel",
+															"fieldParent": "dc089f3f-f2c9-4103-a97e-22e472558e85",
+															"fieldType": "sap.m.Panel",
+															"script": "",
+															"customComponent": false,
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "styleClass",
+																	"grouping": "Properties",
+																	"value": "nepNavigationTile",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "backgroundDesign",
+																	"grouping": "Properties",
+																	"value": "Transparent",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": [
+																{
+																	"fieldNo": "a76ffcbd-bca6-4e87-bab2-9cf7a081f7f5",
+																	"fieldName": "navListVbox",
+																	"fieldParent": "7234e32c-4a67-4501-c568-01d3e118bfa4",
+																	"fieldType": "sap.m.VBox",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "height",
+																			"grouping": "Properties",
+																			"value": "100%",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "19868828-2ec4-4ef9-9ecf-963cd12f1e51",
+																			"fieldName": "navListHbox",
+																			"fieldParent": "a76ffcbd-bca6-4e87-bab2-9cf7a081f7f5",
+																			"fieldType": "sap.m.HBox",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "width",
+																					"grouping": "Properties",
+																					"value": "100%",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "styleClassMargin",
+																					"grouping": "Properties",
+																					"value": "sapUiTinyMarginTopBottom",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "justifyContent",
+																					"grouping": "Properties",
+																					"value": "SpaceBetween",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "5e90b6d8-6416-43dd-d2a6-af911c8702a5",
+																					"fieldName": "oIcon",
+																					"fieldParent": "19868828-2ec4-4ef9-9ecf-963cd12f1e51",
+																					"fieldType": "sap.ui.core.Icon",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "src",
+																							"grouping": "Properties",
+																							"value": "{icon}",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "size",
+																							"grouping": "Properties",
+																							"value": "40px",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				}
+																			]
+																		},
+																		{
+																			"fieldNo": "979495b0-01b9-4d48-967b-fd01e5382eca",
+																			"fieldName": "navListBoxTitle",
+																			"fieldParent": "a76ffcbd-bca6-4e87-bab2-9cf7a081f7f5",
+																			"fieldType": "sap.m.HBox",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [],
+																			"data": [
+																				{
+																					"fieldNo": "6d9f86fd-ad26-4264-abf2-4c69d777b9b8",
+																					"fieldName": "navListTitle",
+																					"fieldParent": "979495b0-01b9-4d48-967b-fd01e5382eca",
+																					"fieldType": "sap.m.Title",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "titleStyle",
+																							"grouping": "Properties",
+																							"value": "H3",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "{name}",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "styleClassMargin",
+																							"grouping": "Properties",
+																							"value": "sapUiTinyMarginTopBottom",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "level",
+																							"grouping": "Properties",
+																							"value": "H1",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "wrapping",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "e5766ee7-d838-44a2-ea01-f51945afc5da",
+																					"fieldName": "navListNumber",
+																					"fieldParent": "979495b0-01b9-4d48-967b-fd01e5382eca",
+																					"fieldType": "sap.m.ObjectNumber",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "styleClassMargin",
+																							"grouping": "Properties",
+																							"value": "sapUiTinyMargin",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "number",
+																							"grouping": "Properties",
+																							"value": "{count}",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "number",
+																							"grouping": "Formatter",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"if (typeof count === \"undefined\" || count === null || count === \"\") { return; }\r",
+																								"return \"(\" + count + \")\";"
+																							],
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				}
+																			]
+																		},
+																		{
+																			"fieldNo": "3104c1f1-a9d8-4082-fad2-420012380698",
+																			"fieldName": "navListDesc",
+																			"fieldParent": "a76ffcbd-bca6-4e87-bab2-9cf7a081f7f5",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{description}",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "a6d7bc58-ede2-4335-8f8f-7ab458421b32",
+									"fieldName": "oBarFooterStart",
+									"fieldParent": "c0634df8-25b5-4d81-eb6f-0f7c2ba66391",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						},
+						{
+							"fieldNo": "7cae32b8-dc97-45be-a236-23cbcba21b53",
+							"fieldName": "oPageUser",
+							"fieldParent": "dab7719e-56f0-4785-d592-70d0f2962233",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"customComponent": false,
+							"bindingValue": "Generic Object",
+							"bindingType": "u",
+							"bindingSource": "P9",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "showHeader",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "floatingFooter",
+									"grouping": "Properties",
+									"value": "true",
 									"script": "",
 									"translation": []
 								},
@@ -61,6 +430,13 @@
 									"request": [],
 									"response": [],
 									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "100%",
+											"script": "",
+											"translation": []
+										},
 										{
 											"attribute": "justifyContent",
 											"grouping": "Properties",
@@ -85,37 +461,69 @@
 									],
 									"data": [
 										{
-											"fieldNo": "0d18b7e8-5493-419c-f5ac-755646d13118",
-											"fieldName": "oVBox",
+											"fieldNo": "b8abc15b-705e-438e-db86-209cf7ce3c62",
+											"fieldName": "oPanel1",
 											"fieldParent": "710b6915-ac4d-44c1-ea47-9d5f09bed57f",
-											"fieldType": "sap.m.VBox",
+											"fieldType": "sap.m.Panel",
 											"script": "",
 											"customComponent": false,
 											"request": [],
 											"response": [],
-											"attributes": [],
+											"attributes": [
+												{
+													"attribute": "styleClass",
+													"grouping": "Properties",
+													"value": "nepFormInput",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "backgroundDesign",
+													"grouping": "Properties",
+													"value": "Transparent",
+													"script": "",
+													"translation": []
+												}
+											],
 											"data": [
 												{
-													"fieldNo": "700def4f-f525-4b0a-8c2b-0eb38e6de537",
-													"fieldName": "inQueue",
-													"fieldParent": "0d18b7e8-5493-419c-f5ac-755646d13118",
-													"fieldType": "nep.bootstrap.Select",
+													"fieldNo": "8f88fa77-3083-4b82-ecff-c3466f481912",
+													"fieldName": "oSimpleForm",
+													"fieldParent": "b8abc15b-705e-438e-db86-209cf7ce3c62",
+													"fieldType": "sap.ui.layout.form.SimpleForm",
 													"script": "",
 													"customComponent": false,
-													"bindingValue": "SkyeQ Client>masterdata",
-													"bindingType": "h",
-													"bindingSource": "API",
-													"bindingParentID": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
-													"bindingPathID": "b57f5d23-df07-48e4-c6c9-da0eff1f3818",
 													"request": [],
 													"response": [],
-													"attributes": [],
+													"attributes": [
+														{
+															"attribute": "layout",
+															"grouping": "Properties",
+															"value": "ResponsiveGridLayout",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "labelSpanM",
+															"grouping": "Properties",
+															"value": "12",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "labelSpanL",
+															"grouping": "Properties",
+															"value": "12",
+															"script": "",
+															"translation": []
+														}
+													],
 													"data": [
 														{
-															"fieldNo": "d0892c08-ec75-4af8-ce1f-c10f228eaf4a",
-															"fieldName": "inQueueItem",
-															"fieldParent": "700def4f-f525-4b0a-8c2b-0eb38e6de537",
-															"fieldType": "sap.ui.core.Item",
+															"fieldNo": "f8804d3c-aae9-4079-83e0-68d79791eca3",
+															"fieldName": "lbloSimpleFormname",
+															"fieldParent": "8f88fa77-3083-4b82-ecff-c3466f481912",
+															"fieldType": "sap.m.Label",
 															"script": "",
 															"customComponent": false,
 															"request": [],
@@ -124,14 +532,81 @@
 																{
 																	"attribute": "text",
 																	"grouping": "Properties",
-																	"value": "{name}",
+																	"value": "Name",
 																	"script": "",
 																	"translation": []
 																},
 																{
-																	"attribute": "key",
+																	"attribute": "required",
 																	"grouping": "Properties",
-																	"value": "{id}",
+																	"value": "true",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "a6fde92f-071c-4365-8e37-6ecaded5498f",
+															"fieldName": "inoSimpleFormname",
+															"fieldParent": "8f88fa77-3083-4b82-ecff-c3466f481912",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"customComponent": false,
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "21451aff-223f-452c-b88e-b9feb4ab29e1",
+															"fieldName": "lbloSimpleFormnote",
+															"fieldParent": "8f88fa77-3083-4b82-ecff-c3466f481912",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"customComponent": false,
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Note",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "074e9841-b1e1-4c90-980e-5815025ba2a8",
+															"fieldName": "inoSimpleFormnote",
+															"fieldParent": "8f88fa77-3083-4b82-ecff-c3466f481912",
+															"fieldType": "sap.m.TextArea",
+															"script": "",
+															"customComponent": false,
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/note}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "growing",
+																	"grouping": "Properties",
+																	"value": "true",
 																	"script": "",
 																	"translation": []
 																}
@@ -139,92 +614,126 @@
 															"data": []
 														}
 													]
-												},
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "3703cc09-b11c-4675-dc26-5e05a91fc467",
+									"fieldName": "oBarFooterUser",
+									"fieldParent": "7cae32b8-dc97-45be-a236-23cbcba21b53",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "368d53ed-7cd2-43e3-c4b4-a21e70f84d34",
+											"fieldName": "oBarContentLeft",
+											"fieldParent": "3703cc09-b11c-4675-dc26-5e05a91fc467",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
 												{
-													"fieldNo": "9cd4c4f8-08cd-4057-f2c0-015bd15685be",
-													"fieldName": "inName",
-													"fieldParent": "0d18b7e8-5493-419c-f5ac-755646d13118",
-													"fieldType": "nep.bootstrap.Input",
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "48ed4994-c00f-4299-f5a5-0cd8da86dcd9",
+													"fieldName": "oButton",
+													"fieldParent": "368d53ed-7cd2-43e3-c4b4-a21e70f84d34",
+													"fieldType": "sap.m.Button",
 													"script": "",
 													"customComponent": false,
 													"request": [],
 													"response": [],
 													"attributes": [
 														{
-															"attribute": "size",
+															"attribute": "text",
 															"grouping": "Properties",
-															"value": "Large",
+															"value": "Back",
 															"script": "",
 															"translation": []
 														},
 														{
-															"attribute": "shadow",
+															"attribute": "icon",
 															"grouping": "Properties",
-															"value": "Normal",
+															"value": "sap-icon://nav-back",
 															"script": "",
 															"translation": []
 														},
 														{
-															"attribute": "label",
-															"grouping": "Properties",
-															"value": "Name",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "formLayout",
-															"grouping": "Properties",
-															"value": "Floating",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "required",
-															"grouping": "Properties",
-															"value": "true",
-															"script": "",
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "oApp.back();",
+															"script": "oApp.back();",
 															"translation": []
 														}
 													],
 													"data": []
-												},
+												}
+											]
+										},
+										{
+											"fieldNo": "2c7d8ffb-e15c-4026-c665-eb043ef4fa32",
+											"fieldName": "oBarContenRight",
+											"fieldParent": "3703cc09-b11c-4675-dc26-5e05a91fc467",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
 												{
-													"fieldNo": "16006541-ec22-4bff-8735-eaf1a8d55bf0",
-													"fieldName": "butStart",
-													"fieldParent": "0d18b7e8-5493-419c-f5ac-755646d13118",
-													"fieldType": "nep.bootstrap.Button",
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "1e639267-ee64-47c4-a399-ba3abff7c43c",
+													"fieldName": "oButtonStart",
+													"fieldParent": "2c7d8ffb-e15c-4026-c665-eb043ef4fa32",
+													"fieldType": "sap.m.Button",
 													"script": "",
 													"customComponent": false,
 													"request": [],
 													"response": [],
 													"attributes": [
 														{
-															"attribute": "press",
-															"grouping": "Events",
-															"value": "Anonymous Function",
-															"script": [
-																"==OBJECT STRING==",
-																"if (!inName.getValue()) {\r",
-																"    console.log(\"Error, no name\")\r",
-																"} else {\r",
-																"    apiStart({\r",
-																"        data: {\r",
-																"            name: inName.getValue(),\r",
-																"            queue: inQueue.getSelectedKey(),\r",
-																"            status: 1\r",
-																"        }\r",
-																"    }).then(function (res) {\r",
-																"        SkyeQ.status = 1;\r",
-																"        SkyeQ.data = res.data;\r",
-																"        SkyeQ.startStatus();\r",
-																"        oApp.to(oPageQueue);\r",
-																"\r",
-																"        inName.setValue(\"\")\r",
-																"    })\r",
-																"\r",
-																"}"
-															],
-															"language": "javascript",
+															"attribute": "width",
+															"grouping": "Properties",
+															"value": "100%",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
 															"translation": []
 														},
 														{
@@ -235,38 +744,10 @@
 															"translation": []
 														},
 														{
-															"attribute": "margin",
-															"grouping": "Properties",
-															"value": "MarginTop2",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "size",
-															"grouping": "Properties",
-															"value": "Large",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "shadow",
-															"grouping": "Properties",
-															"value": "Normal",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "backgroundColor",
-															"grouping": "Properties",
-															"value": "Primary",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "width",
-															"grouping": "Properties",
-															"value": "100%",
-															"script": "",
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "SkyeQ.enterQueue();",
+															"script": "SkyeQ.enterQueue();",
 															"translation": []
 														}
 													],
@@ -294,6 +775,20 @@
 									"value": "false",
 									"script": "",
 									"translation": []
+								},
+								{
+									"attribute": "floatingFooter",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "backgroundDesign",
+									"grouping": "Properties",
+									"value": "Transparent",
+									"script": "",
+									"translation": []
 								}
 							],
 							"data": [
@@ -311,6 +806,13 @@
 											"attribute": "title",
 											"grouping": "Properties",
 											"value": "Your place in queue",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberState",
+											"grouping": "Properties",
+											"value": "Warning",
 											"script": "",
 											"translation": []
 										}
@@ -349,28 +851,7 @@
 											"request": [],
 											"response": [],
 											"attributes": [],
-											"data": [
-												{
-													"fieldNo": "29aebb6c-b4fc-4de6-ffa3-f14e17da8be7",
-													"fieldName": "colHtabStatusname",
-													"fieldParent": "9cef5a2a-02db-490b-8786-4cda972e0178",
-													"fieldType": "sap.m.Text",
-													"script": "",
-													"customComponent": false,
-													"request": [],
-													"response": [],
-													"attributes": [
-														{
-															"attribute": "text",
-															"grouping": "Properties",
-															"value": "Name",
-															"script": "",
-															"translation": []
-														}
-													],
-													"data": []
-												}
-											]
+											"data": []
 										},
 										{
 											"fieldNo": "48e8efca-0189-4442-e70e-54df7694a3bc",
@@ -381,29 +862,16 @@
 											"customComponent": false,
 											"request": [],
 											"response": [],
-											"attributes": [],
-											"data": [
+											"attributes": [
 												{
-													"fieldNo": "4bc2b775-4d43-4e60-d3ac-3918af29ff41",
-													"fieldName": "colHtabStatusupdatedAt",
-													"fieldParent": "48e8efca-0189-4442-e70e-54df7694a3bc",
-													"fieldType": "sap.m.Text",
+													"attribute": "hAlign",
+													"grouping": "Properties",
+													"value": "End",
 													"script": "",
-													"customComponent": false,
-													"request": [],
-													"response": [],
-													"attributes": [
-														{
-															"attribute": "text",
-															"grouping": "Properties",
-															"value": "Started At",
-															"script": "",
-															"translation": []
-														}
-													],
-													"data": []
+													"translation": []
 												}
-											]
+											],
+											"data": []
 										},
 										{
 											"fieldNo": "376fc1a6-fbf3-4ea7-ec0a-ccc940103cca",
@@ -425,24 +893,71 @@
 											],
 											"data": [
 												{
-													"fieldNo": "103aedc5-7529-4f40-a6f9-0a2deb4fd1a5",
-													"fieldName": "txttabStatusname",
+													"fieldNo": "ea1490e2-ed83-46c9-b26d-500454fe6e84",
+													"fieldName": "oVBox",
 													"fieldParent": "376fc1a6-fbf3-4ea7-ec0a-ccc940103cca",
-													"fieldType": "sap.m.Text",
+													"fieldType": "sap.m.VBox",
 													"script": "",
 													"customComponent": false,
 													"request": [],
 													"response": [],
-													"attributes": [
+													"attributes": [],
+													"data": [
 														{
-															"attribute": "text",
-															"grouping": "Properties",
-															"value": "{name}",
+															"fieldNo": "373c18c7-67d0-4d48-d400-9f41c7829a00",
+															"fieldName": "txttabStatusname",
+															"fieldParent": "ea1490e2-ed83-46c9-b26d-500454fe6e84",
+															"fieldType": "sap.m.Title",
 															"script": "",
-															"translation": []
+															"customComponent": false,
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "level",
+																	"grouping": "Properties",
+																	"value": "H2",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "af289e22-77fa-40d6-a4e6-897d008d6a3a",
+															"fieldName": "txttabStatusstatus",
+															"fieldParent": "ea1490e2-ed83-46c9-b26d-500454fe6e84",
+															"fieldType": "sap.m.ObjectStatus",
+															"script": "",
+															"customComponent": false,
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{status}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "state",
+																	"grouping": "Properties",
+																	"value": "{state}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
 														}
-													],
-													"data": []
+													]
 												},
 												{
 													"fieldNo": "9117b29a-0b8f-482e-f24a-01f5ef78d0c0",
@@ -524,39 +1039,34 @@
 											],
 											"data": [
 												{
-													"fieldNo": "0ad50e41-4eb0-465e-e577-3c1746adbfa2",
-													"fieldName": "butCancel",
+													"fieldNo": "d546b691-0dea-4cd1-f1c3-8e5df4ddee0c",
+													"fieldName": "oButtonLeave",
 													"fieldParent": "814e8ab3-d6c6-44ca-dcfc-4a434f6f5bc2",
-													"fieldType": "nep.bootstrap.Button",
+													"fieldType": "sap.m.Button",
 													"script": "",
 													"customComponent": false,
 													"request": [],
 													"response": [],
 													"attributes": [
 														{
-															"attribute": "press",
-															"grouping": "Events",
-															"value": "Anonymous Function",
-															"script": [
-																"==OBJECT STRING==",
-																"apiLeave({\r",
-																"    parameters: {\r",
-																"        id: SkyeQ.data.id\r",
-																"    }\r",
-																"}).then(function (res) {\r",
-																"    SkyeQ.status = 9;\r",
-																"    oApp.to(oPageScan)\r",
-																"})\r",
-																""
-															],
-															"language": "javascript",
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
 															"translation": []
 														},
 														{
 															"attribute": "text",
 															"grouping": "Properties",
-															"value": "Leave Queue",
+															"value": "Leave",
 															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "SkyeQ.leaveQueue()",
+															"script": "SkyeQ.leaveQueue()",
 															"translation": []
 														}
 													],
@@ -614,7 +1124,7 @@
 								{
 									"status": "200",
 									"dataId": "b57f5d23-df07-48e4-c6c9-da0eff1f3818",
-									"modelFieldNo": "700def4f-f525-4b0a-8c2b-0eb38e6de537"
+									"modelFieldNo": "7788292b-d164-4b6b-9b50-743fe4e366cf"
 								}
 							],
 							"attributes": [
@@ -623,14 +1133,6 @@
 									"grouping": "Model",
 									"value": "online",
 									"script": "",
-									"translation": []
-								},
-								{
-									"attribute": "ajaxSuccess",
-									"grouping": "Events",
-									"value": "inQueue.setSelectedKey(modelinQueue.oData[0].id)",
-									"script": "inQueue.setSelectedKey(modelinQueue.oData[0].id)",
-									"language": "javascript",
 									"translation": []
 								}
 							],
@@ -676,13 +1178,59 @@
 						"const SkyeQ = {\r",
 						"    data: null,\r",
 						"    status: null,\r",
+						"    queue: null,\r",
+						"\r",
+						"    leaveQueue: function () {\r",
+						"        \r",
+						"        apiLeave({\r",
+						"            parameters: {\r",
+						"                id: SkyeQ.data.id\r",
+						"            }\r",
+						"        }).then(function (res) {\r",
+						"            SkyeQ.status = 9;\r",
+						"            oApp.to(oPageStart)\r",
+						"        })\r",
+						"\r",
+						"    },\r",
+						"\r",
+						"    enterQueue: function () {\r",
+						"\r",
+						"        inoSimpleFormname.setValueState(\"None\");\r",
+						"\r",
+						"        if (!modeloPageUser.oData.name) {\r",
+						"            inoSimpleFormname.setValueState(\"Error\");\r",
+						"            return;\r",
+						"        }\r",
+						"\r",
+						"        apiStart({\r",
+						"            data: {\r",
+						"                name: modeloPageUser.oData.name,\r",
+						"                phone: modeloPageUser.oData.phone,\r",
+						"                email: modeloPageUser.oData.email,\r",
+						"                note: modeloPageUser.oData.note,\r",
+						"                queue: SkyeQ.queue.id,\r",
+						"                status: 1\r",
+						"            }\r",
+						"        }).then(function (res) {\r",
+						"            SkyeQ.status = 1;\r",
+						"            SkyeQ.data = res.data;\r",
+						"            SkyeQ.startStatus();\r",
+						"            oApp.to(oPageQueue);\r",
+						"            statusHeader.setIntro(SkyeQ.queue.name);\r",
+						"\r",
+						"        })\r",
+						"\r",
+						"\r",
+						"\r",
+						"    },\r",
 						"    startStatus: function () {\r",
 						"\r",
 						"        function check() {\r",
 						"\r",
 						"            var options = {\r",
 						"                parameters: {\r",
-						"                    \"id\": SkyeQ.data.id\r",
+						"                    id: SkyeQ.data.id,\r",
+						"                    queue: SkyeQ.queue.id,\r",
 						"                }\r",
 						"            };\r",
 						"\r",
@@ -694,7 +1242,7 @@
 						"\r",
 						"                setTimeout(function () {\r",
 						"                    if (SkyeQ.status === 1) check();\r",
-						"                }, 1000);\r",
+						"                }, 500);\r",
 						"\r",
 						"            });\r",
 						"        }\r",
@@ -707,7 +1255,7 @@
 						"\r",
 						"\r",
 						"// Init\r",
-						"sap.ui.require(\"sap/ui/code/format/DateFormat\");\r",
+						"sap.ui.require(\"sap/ui/core/format/DateFormat\");\r",
 						"AppCacheShellTitle.setText(\"Skye Queue\")"
 					],
 					"customComponent": false,
@@ -723,7 +1271,7 @@
 			"data": []
 		}
 	],
-	"ver": "22.9.24.1222",
+	"ver": "22.9.24.1623",
 	"application": "skyeq_client",
 	"title": "",
 	"description": "Skye Q",
@@ -737,7 +1285,7 @@
 	"loadApplicationCode": null,
 	"appType": "A",
 	"ui5_m": true,
-	"ui5_f": false,
+	"ui5_f": true,
 	"ui5_table": false,
 	"ui5_tnt": false,
 	"ui5_uxap": false,
@@ -750,6 +1298,12 @@
 		"==OBJECT STRING==",
 		".sapMShellGlobalOuterBackground {\r",
 		"    background: transparent;\r",
+		"}\r",
+		"\r",
+		".nepFormInput {\r",
+		"    max-width:600px;\r",
+		"    margin-left: auto;\r",
+		"    margin-right: auto;\r",
 		"}"
 	],
 	"header": "",
@@ -759,7 +1313,7 @@
 	"libHighchart": false,
 	"libHighmap": false,
 	"publicAccess": true,
-	"ui5_bootstrap": true,
+	"ui5_bootstrap": false,
 	"ui5_ionic": false,
 	"useV2AppHandler": false,
 	"compilerTarget": 3,
@@ -767,7 +1321,7 @@
 		{
 			"id": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
 			"name": "SkyeQ Client",
-			"ver": "22.9.24.1013"
+			"ver": "22.9.24.1339"
 		}
 	],
 	"package": "de916930-7bab-4416-b294-24cae145feab"

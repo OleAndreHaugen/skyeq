@@ -44,6 +44,12 @@
 			"application": "skyeq_client",
 			"title": "",
 			"description": "Skye Q"
+		},
+		{
+			"id": "3134cb67-bdac-4f2a-9c32-1beb5dfcc8cf",
+			"application": "skyeq_manager",
+			"title": "SkyeQ Manager",
+			"description": "SkyeQ Manager"
 		}
 	],
 	"api": [
@@ -63,20 +69,30 @@
 			"description": "SkyeQ: Queues"
 		},
 		{
+			"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
+			"name": "skyequeue_status",
+			"description": "SkyeQ: Status"
+		},
+		{
 			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
 			"name": "skyequeue",
-			"description": null
+			"description": "SkyeQ: Master"
 		}
 	],
 	"jsclass": [
 		{
-			"id": "fc436f99-8799-49f5-af3b-101a1abfdb24",
-			"name": "start",
+			"id": "001ea4b7-07f7-4b6d-966d-535720fd3108",
+			"name": "manager",
 			"description": null
 		},
 		{
-			"id": "cfd65f6d-7788-4e24-a5d4-c11b00f051c5",
-			"name": "status",
+			"id": "01766f26-0283-4089-b332-2b1fdf1f1820",
+			"name": "webSockets",
+			"description": null
+		},
+		{
+			"id": "fc436f99-8799-49f5-af3b-101a1abfdb24",
+			"name": "start",
 			"description": null
 		},
 		{
@@ -87,6 +103,16 @@
 		{
 			"id": "79f556cb-4373-451c-b627-40632b332f69",
 			"name": "masterdata",
+			"description": null
+		},
+		{
+			"id": "428a29ed-dde5-4149-8066-02e1729c9226",
+			"name": "setStatus",
+			"description": null
+		},
+		{
+			"id": "cfd65f6d-7788-4e24-a5d4-c11b00f051c5",
+			"name": "status",
 			"description": null
 		}
 	],
@@ -102,30 +128,47 @@
 	"rulesengine": [],
 	"reports": [
 		{
+			"id": "8e2f3971-1f31-4bba-b24a-fc095bd2a6a3",
+			"name": "skyeq_queues",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "0932ae93-30af-4079-b810-aef0a148a5c0",
+			"name": "skyeq_status",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
 			"id": "8dfc29f8-81a4-4196-8e22-2785dae978f2",
 			"name": "skyeq_master",
 			"description": "",
 			"application": "planet9_adaptive_list"
 		},
 		{
-			"id": "8e2f3971-1f31-4bba-b24a-fc095bd2a6a3",
-			"name": "skyeq_queues",
+			"id": "51feb17f-5732-4b57-990b-9d65f4afac60",
+			"name": "skyeq_tile_stats",
 			"description": "",
-			"application": "planet9_adaptive_list"
+			"application": "planet9_adaptive_tile_chart"
 		}
 	],
 	"api_authentication": [],
 	"api_group": [],
 	"tile": [
 		{
-			"id": "7905de68-88e6-4efe-88ea-21b23d3827e3",
-			"description": null,
-			"name": "Skye Q Master"
-		},
-		{
 			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
 			"description": null,
 			"name": "Skye Q Queues"
+		},
+		{
+			"id": "2f9b0f64-ebb8-4b8f-9bd1-31aa8011c9c4",
+			"description": null,
+			"name": "Skye Q Status"
+		},
+		{
+			"id": "7905de68-88e6-4efe-88ea-21b23d3827e3",
+			"description": null,
+			"name": "Skye Q Manager"
 		}
 	],
 	"category": [
@@ -133,6 +176,11 @@
 			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
 			"description": null,
 			"name": "Skye Q"
+		},
+		{
+			"id": "8ad76ab1-008b-46b5-9e48-cda270b3b675",
+			"description": null,
+			"name": "Skye Q Master Data"
 		}
 	],
 	"launchpad": [
@@ -164,6 +212,11 @@
 		{
 			"id": "943c8773-5a10-4497-9642-337dd0283544",
 			"name": "SkyeQ: Queues",
+			"description": null
+		},
+		{
+			"id": "25d7e073-d923-48d0-91a2-7a0db8ed03e7",
+			"name": "SkyeQ: Status",
 			"description": null
 		}
 	]

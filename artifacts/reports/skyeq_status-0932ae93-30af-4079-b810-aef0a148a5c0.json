@@ -1,6 +1,6 @@
 {
-	"id": "8dfc29f8-81a4-4196-8e22-2785dae978f2",
-	"createdAt": "2022-09-24T09:43:36.439Z",
+	"id": "0932ae93-30af-4079-b810-aef0a148a5c0",
+	"createdAt": "2022-09-24T10:39:14.358Z",
 	"createdBy": "ole-andre.haugen@neptune-software.com",
 	"settings": {
 		"properties": {
@@ -25,7 +25,7 @@
 				"textButtonRun": "Update",
 				"typeButtonRun": "Emphasized",
 				"enableRun": true,
-				"enableCreate": false,
+				"enableCreate": true,
 				"enableClose": false,
 				"enableDelete": true,
 				"enableExport": false,
@@ -38,7 +38,7 @@
 				"searchLabel": "Search",
 				"searchPlaceholder": "",
 				"title": "Skye Q",
-				"subTitle": "Overview"
+				"subTitle": "Status"
 			},
 			"form": {
 				"enableCompact": false,
@@ -77,33 +77,15 @@
 				"usage": "BOTH"
 			},
 			{
-				"name": "email",
-				"label": "eMail",
-				"type": "mediumtext",
-				"usage": "BOTH"
-			},
-			{
 				"name": "name",
 				"label": "Name",
 				"type": "mediumtext",
 				"usage": "BOTH"
 			},
 			{
-				"name": "note",
-				"label": "Note",
-				"type": "text",
-				"usage": "BOTH"
-			},
-			{
-				"name": "phone",
-				"label": "Phone",
+				"name": "state",
+				"label": "State",
 				"type": "mediumtext",
-				"usage": "BOTH"
-			},
-			{
-				"name": "queue",
-				"label": "Queue",
-				"type": "smalltext",
 				"usage": "BOTH"
 			},
 			{
@@ -131,60 +113,11 @@
 				"enableFilter": false,
 				"enableSort": true,
 				"visible": true,
-				"name": "updatedAt",
-				"text": "Updated At",
-				"fieldPos": 1,
-				"formatter": "date00"
-			},
-			{
-				"enableFilter": false,
-				"enableSort": true,
-				"visible": true,
 				"name": "status",
 				"text": "Status",
-				"fieldPos": 2,
-				"type": "",
-				"lookupTable": "skyequeue_status",
-				"lookupFieldKey": "status",
-				"lookupFieldText": "name",
-				"lookupShowOnlyText": true,
-				"editable": true,
-				"valueType": "Lookup",
-				"valueLookup": {
-					"table": "skyequeue_status",
-					"textField": "name",
-					"keyField": [
-						{
-							"fieldName": "status",
-							"key": "status",
-							"value": ""
-						}
-					],
-					"hideKey": true,
-					"butType": "Accept"
-				}
-			},
-			{
-				"enableFilter": true,
-				"enableSort": true,
-				"visible": true,
-				"name": "queue",
-				"text": "Queue",
-				"fieldPos": 3,
-				"valueType": "Lookup",
-				"valueLookup": {
-					"table": "skyequeue_queues",
-					"textField": "name",
-					"keyField": [
-						{
-							"fieldName": "id",
-							"key": "queue",
-							"value": ""
-						}
-					],
-					"hideKey": true,
-					"butType": "Accept"
-				}
+				"fieldPos": 1,
+				"type": "Input",
+				"editable": true
 			},
 			{
 				"enableFilter": true,
@@ -192,35 +125,40 @@
 				"visible": true,
 				"name": "name",
 				"text": "Name",
-				"fieldPos": 4
+				"fieldPos": 2,
+				"type": "Input",
+				"editable": true
 			},
 			{
 				"enableFilter": true,
 				"enableSort": true,
 				"visible": true,
-				"name": "phone",
-				"text": "Phone",
+				"name": "state",
+				"text": "State",
+				"fieldPos": 3,
+				"type": "Input",
+				"editable": true
+			},
+			{
+				"enableFilter": false,
+				"enableSort": true,
+				"visible": true,
+				"name": "updatedAt",
+				"text": "Updated At",
+				"fieldPos": 4,
+				"formatter": "date00"
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "updatedBy",
+				"text": "Updated By",
 				"fieldPos": 5
-			},
-			{
-				"enableFilter": true,
-				"enableSort": true,
-				"visible": true,
-				"name": "email",
-				"text": "eMail",
-				"fieldPos": 6
-			},
-			{
-				"enableFilter": true,
-				"enableSort": true,
-				"visible": true,
-				"name": "note",
-				"text": "Note",
-				"fieldPos": 7
 			}
 		],
 		"defaultVariant": {
-			"id": "1d2fbcf6-dd27-4dbc-ce90-a9a492efac29",
+			"id": "7808c7c6-9031-42b6-b49e-322c090cf151",
 			"colOrder": "key_a_to_z",
 			"rowOrder": "key_a_to_z",
 			"row": [],
@@ -230,15 +168,15 @@
 			"exclusions": {}
 		}
 	},
-	"name": "skyeq_master",
+	"name": "skyeq_status",
 	"description": "",
 	"group": "",
 	"type": "C",
-	"connectorid": "ab76d4de-10e1-4e5d-9bb4-8d218798996a",
+	"connectorid": "25d7e073-d923-48d0-91a2-7a0db8ed03e7",
 	"scriptSel": null,
 	"scriptRun": null,
 	"tableid": null,
-	"ver": "22.9.24.1240",
+	"ver": "22.9.24.1258",
 	"disabled": false,
 	"appType": "A",
 	"application": "planet9_adaptive_list",

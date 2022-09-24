@@ -94,6 +94,18 @@
 				"usage": "BOTH"
 			},
 			{
+				"name": "description",
+				"label": "Description",
+				"type": "text",
+				"usage": "BOTH"
+			},
+			{
+				"name": "icon",
+				"label": "Icon",
+				"type": "mediumtext",
+				"usage": "BOTH"
+			},
+			{
 				"name": "name",
 				"label": "Name",
 				"type": "smalltext",
@@ -136,9 +148,29 @@
 				"enableFilter": true,
 				"enableSort": true,
 				"visible": true,
+				"name": "description",
+				"text": "Description",
+				"fieldPos": 3,
+				"type": "Input",
+				"editable": true
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "icon",
+				"text": "Icon",
+				"fieldPos": 4,
+				"type": "Input",
+				"editable": true
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
 				"name": "updatedBy",
 				"text": "Updated By",
-				"fieldPos": 3
+				"fieldPos": 5
 			},
 			{
 				"enableFilter": false,
@@ -146,7 +178,7 @@
 				"visible": true,
 				"name": "updatedAt",
 				"text": "Updated At",
-				"fieldPos": 4,
+				"fieldPos": 6,
 				"formatter": "date00"
 			}
 		],
@@ -169,7 +201,7 @@
 	"scriptSel": null,
 	"scriptRun": null,
 	"tableid": null,
-	"ver": "22.9.24.1019",
+	"ver": "22.9.24.1219",
 	"disabled": false,
 	"appType": "A",
 	"application": "planet9_adaptive_list",
