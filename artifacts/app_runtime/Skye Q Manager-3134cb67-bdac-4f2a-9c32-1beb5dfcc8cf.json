@@ -1279,6 +1279,38 @@
 			"fieldNo": 99999,
 			"data": [
 				{
+					"fieldNo": "c6ed90e2-abac-4893-9c52-807f47a07fed",
+					"fieldName": "EventListener",
+					"fieldParent": 99999,
+					"fieldType": "neptune.events.Listener",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "event",
+							"grouping": "Properties",
+							"value": "SkyeQPush",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "action",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": [
+								"==OBJECT STRING==",
+								"\r",
+								"console.log(\"Trigger\", data);"
+							],
+							"language": "javascript",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
 					"fieldNo": "2ae021ac-bac1-40f3-afc3-07868a755fc2",
 					"fieldName": "Init",
 					"fieldParent": 99999,
@@ -1338,68 +1370,6 @@
 					"response": [],
 					"attributes": [],
 					"data": []
-				},
-				{
-					"fieldNo": "51d20088-950f-4008-b814-58ee059a4b54",
-					"fieldName": "SetStatus",
-					"fieldParent": 99999,
-					"fieldType": "neptune.restapi",
-					"script": "",
-					"customComponent": false,
-					"restSource": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
-					"restOperation": "cafea62e-51f3-46fc-d249-08cb79c8f4a1",
-					"request": [],
-					"response": [
-						{
-							"status": "200",
-							"dataId": "b2cd4ec2-3b91-46a6-bdc4-5f6e3284fda2",
-							"modelFieldNo": "a9977b45-911e-4fcb-d58f-6286f5088011"
-						}
-					],
-					"attributes": [
-						{
-							"attribute": "ajaxSuccess",
-							"grouping": "Events",
-							"value": "Anonymous Function",
-							"script": [
-								"==OBJECT STRING==",
-								"tabNew.removeSelections();\r",
-								"tabProcessing.removeSelections();\r",
-								"tabCompleted.removeSelections();"
-							],
-							"language": "javascript",
-							"translation": []
-						}
-					],
-					"data": []
-				},
-				{
-					"fieldNo": "8659cb05-07e0-4f09-ded5-f3aa6aadbb57",
-					"fieldName": "GetData",
-					"fieldParent": 99999,
-					"fieldType": "neptune.restapi",
-					"script": "",
-					"customComponent": false,
-					"restSource": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
-					"restOperation": "f4d3fa01-4b7e-4ceb-faf6-0e3866d79ad9",
-					"request": [],
-					"response": [
-						{
-							"status": "200",
-							"dataId": "b2cd4ec2-3b91-46a6-bdc4-5f6e3284fda2",
-							"modelFieldNo": "a9977b45-911e-4fcb-d58f-6286f5088011"
-						}
-					],
-					"attributes": [
-						{
-							"attribute": "setInitLoad",
-							"grouping": "Model",
-							"value": "online",
-							"script": "",
-							"translation": []
-						}
-					],
-					"data": []
 				}
 			]
 		},
@@ -1408,10 +1378,10 @@
 			"data": []
 		}
 	],
-	"ver": "22.9.24.1647",
+	"ver": "22.9.25.1645",
 	"application": "skyeq_manager",
-	"title": "SkyeQ Manager",
-	"description": "SkyeQ Manager",
+	"title": "Skye Q Manager",
+	"description": "Skye Q Manager",
 	"enableFileStorage": false,
 	"enableManifest": false,
 	"enableStylesheet": false,
@@ -1441,14 +1411,8 @@
 	"publicAccess": false,
 	"ui5_bootstrap": false,
 	"ui5_ionic": false,
-	"useV2AppHandler": false,
+	"useV2AppHandler": true,
 	"compilerTarget": 3,
-	"apis": [
-		{
-			"id": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
-			"name": "SkyeQ Client",
-			"ver": "22.9.24.1339"
-		}
-	],
+	"apis": [],
 	"package": "de916930-7bab-4416-b294-24cae145feab"
 }

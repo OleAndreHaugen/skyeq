@@ -7,18 +7,18 @@
 	"entitySets": [
 		{
 			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
-			"name": "skyequeue",
-			"contextname": "skyequeue"
+			"name": "skyeq_master",
+			"contextname": "skyeq_master"
 		},
 		{
 			"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
-			"name": "skyequeue_status",
-			"contextname": "skyequeue_status"
+			"name": "skyeq_status",
+			"contextname": "skyeq_status"
 		}
 	],
 	"apis": [],
 	"name": "status",
-	"ver": "22.9.24.143",
+	"ver": "22.9.25.1441",
 	"description": null,
 	"content": [
 		"==OBJECT STRING==",
@@ -29,9 +29,9 @@
 		"\r",
 		"    let num = 0;\r",
 		"\r",
-		"    const status = await entities.skyequeue_status.find();\r",
+		"    const status = await entities.skyeq_status.find();\r",
 		"\r",
-		"    const rec = await entities.skyequeue.find({\r",
+		"    const rec = await entities.skyeq_master.find({\r",
 		"        where: {\r",
 		"            queue: req.query.queue,\r",
 		"            status: In([1, 2])\r",

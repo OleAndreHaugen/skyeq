@@ -36,20 +36,20 @@
 	},
 	"name": "com.neptune.skyeq",
 	"description": "Skye Q",
-	"ver": "22.9.24.1023",
+	"ver": "22.9.26.833",
 	"enableCICD": true,
 	"apps": [
 		{
 			"id": "b07e1be4-e5eb-4b2a-a372-c51d5e99cbdd",
 			"application": "skyeq_client",
-			"title": "",
-			"description": "Skye Q"
+			"title": "Skye Q Client",
+			"description": "Skye Q Client"
 		},
 		{
 			"id": "3134cb67-bdac-4f2a-9c32-1beb5dfcc8cf",
 			"application": "skyeq_manager",
-			"title": "SkyeQ Manager",
-			"description": "SkyeQ Manager"
+			"title": "Skye Q Manager",
+			"description": "Skye Q Manager"
 		}
 	],
 	"api": [
@@ -65,17 +65,17 @@
 	"dictionary": [
 		{
 			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
-			"name": "skyequeue_queues",
-			"description": "SkyeQ: Queues"
+			"name": "skyeq_queue",
+			"description": "SkyeQ: Queue"
 		},
 		{
 			"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
-			"name": "skyequeue_status",
+			"name": "skyeq_status",
 			"description": "SkyeQ: Status"
 		},
 		{
 			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
-			"name": "skyequeue",
+			"name": "skyeq_master",
 			"description": "SkyeQ: Master"
 		}
 	],
@@ -83,11 +83,6 @@
 		{
 			"id": "001ea4b7-07f7-4b6d-966d-535720fd3108",
 			"name": "manager",
-			"description": null
-		},
-		{
-			"id": "01766f26-0283-4089-b332-2b1fdf1f1820",
-			"name": "webSockets",
 			"description": null
 		},
 		{
@@ -113,6 +108,11 @@
 		{
 			"id": "cfd65f6d-7788-4e24-a5d4-c11b00f051c5",
 			"name": "status",
+			"description": null
+		},
+		{
+			"id": "5428e56f-59f1-4653-92ce-8b8856067715",
+			"name": "serverHandler",
 			"description": null
 		}
 	],
@@ -206,12 +206,12 @@
 	"connector": [
 		{
 			"id": "ab76d4de-10e1-4e5d-9bb4-8d218798996a",
-			"name": "SkyeQ: Queue",
+			"name": "SkyeQ: Master",
 			"description": null
 		},
 		{
 			"id": "943c8773-5a10-4497-9642-337dd0283544",
-			"name": "SkyeQ: Queues",
+			"name": "SkyeQ: Queue",
 			"description": null
 		},
 		{

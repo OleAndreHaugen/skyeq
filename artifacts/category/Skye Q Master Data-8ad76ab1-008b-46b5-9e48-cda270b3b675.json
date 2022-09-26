@@ -63,16 +63,16 @@
 	"roles": [],
 	"tiles": [
 		{
-			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
-			"name": "Skye Q Queues",
-			"title": "Skye Q Queues",
-			"ver": "22.9.24.1010"
-		},
-		{
 			"id": "2f9b0f64-ebb8-4b8f-9bd1-31aa8011c9c4",
 			"name": "Skye Q Status",
 			"title": "Skye Q Status",
 			"ver": "22.9.24.1048"
+		},
+		{
+			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
+			"name": "Skye Q Queues",
+			"title": "Skye Q Queues",
+			"ver": "22.9.24.1010"
 		}
 	]
 }

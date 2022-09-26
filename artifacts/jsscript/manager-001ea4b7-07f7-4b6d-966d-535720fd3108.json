@@ -6,36 +6,31 @@
 	"externalModules": [],
 	"entitySets": [
 		{
-			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
-			"name": "skyequeue",
-			"contextname": "skyequeue"
-		},
-		{
-			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
-			"name": "skyequeue",
-			"contextname": "skyequeue"
-		},
-		{
 			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
-			"name": "skyequeue_queues",
-			"contextname": "skyequeue_queues"
+			"name": "skyeq_queue",
+			"contextname": "skyeq_queue"
 		},
 		{
 			"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
-			"name": "skyequeue_status",
-			"contextname": "skyequeue_status"
+			"name": "skyeq_status",
+			"contextname": "skyeq_status"
+		},
+		{
+			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
+			"name": "skyeq_master",
+			"contextname": "skyeq_master"
 		}
 	],
 	"apis": [],
 	"name": "manager",
-	"ver": "22.9.24.1342",
+	"ver": "22.9.25.1441",
 	"description": null,
 	"content": [
 		"==OBJECT STRING==",
 		"result.data = {\r",
-		"    status: await entities.skyequeue_status.find(),\r",
-		"    queues: await entities.skyequeue_queues.find(),\r",
-		"    queue: await entities.skyequeue.find({ order: { createdAt: \"ASC\" } }),\r",
+		"    status: await entities.skyeq_status.find(),\r",
+		"    queues: await entities.skyeq_queue.find(),\r",
+		"    queue: await entities.skyeq_master.find({ order: { createdAt: \"ASC\" } }),\r",
 		"}\r",
 		"complete();"
 	],

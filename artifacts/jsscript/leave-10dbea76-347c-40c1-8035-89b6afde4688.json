@@ -7,19 +7,19 @@
 	"entitySets": [
 		{
 			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
-			"name": "skyequeue",
-			"contextname": "skyequeue"
+			"name": "skyeq_master",
+			"contextname": "skyeq_master"
 		}
 	],
 	"apis": [],
 	"name": "leave",
-	"ver": "22.9.24.935",
+	"ver": "22.9.25.1441",
 	"description": null,
 	"content": [
 		"==OBJECT STRING==",
 		"try {\r",
 		"\r",
-		"    await entities.skyequeue.delete({\r",
+		"    await entities.skyeq_master.delete({\r",
 		"        id: req.query.id\r",
 		"    });\r",
 		"\r",

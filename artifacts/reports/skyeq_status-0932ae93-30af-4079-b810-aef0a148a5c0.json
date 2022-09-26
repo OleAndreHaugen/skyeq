@@ -65,15 +65,9 @@
 		},
 		"fieldCatalog": [
 			{
-				"name": "createdAt",
-				"label": "Created At",
-				"type": "timestamp",
-				"usage": "BOTH"
-			},
-			{
-				"name": "createdBy",
-				"label": "Created By",
-				"type": "text",
+				"name": "status",
+				"label": "Status",
+				"type": "integer",
 				"usage": "BOTH"
 			},
 			{
@@ -89,20 +83,26 @@
 				"usage": "BOTH"
 			},
 			{
-				"name": "status",
-				"label": "Status",
-				"type": "integer",
-				"usage": "BOTH"
-			},
-			{
 				"name": "updatedAt",
 				"label": "Updated At",
 				"type": "timestamp",
 				"usage": "BOTH"
 			},
 			{
+				"name": "createdAt",
+				"label": "Created At",
+				"type": "timestamp",
+				"usage": "BOTH"
+			},
+			{
 				"name": "updatedBy",
 				"label": "Updated By",
+				"type": "text",
+				"usage": "BOTH"
+			},
+			{
+				"name": "createdBy",
+				"label": "Created By",
 				"type": "text",
 				"usage": "BOTH"
 			}
@@ -176,7 +176,7 @@
 	"scriptSel": null,
 	"scriptRun": null,
 	"tableid": null,
-	"ver": "22.9.24.1258",
+	"ver": "22.9.25.1438",
 	"disabled": false,
 	"appType": "A",
 	"application": "planet9_adaptive_list",

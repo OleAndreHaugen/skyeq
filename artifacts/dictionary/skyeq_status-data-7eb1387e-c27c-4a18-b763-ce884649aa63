@@ -1,8 +1,8 @@
 [
 	{
 		"id": "a9a7bb0f-204c-4672-88c5-3e1269f7daf0",
-		"createdAt": "1664016013827",
-		"updatedAt": "1664024285189",
+		"createdAt": 1664016013827,
+		"updatedAt": 1664024285189,
 		"createdBy": "ole-andre.haugen@neptune-software.com",
 		"updatedBy": "ole-andre.haugen@neptune-software.com",
 		"status": 1,
@@ -11,8 +11,8 @@
 	},
 	{
 		"id": "7d5ba9a7-84d1-4b97-a729-2170074581e8",
-		"createdAt": "1664027805924",
-		"updatedAt": "1664027812921",
+		"createdAt": 1664027805924,
+		"updatedAt": 1664027812921,
 		"createdBy": "ole-andre.haugen@neptune-software.com",
 		"updatedBy": "ole-andre.haugen@neptune-software.com",
 		"status": 3,
@@ -21,8 +21,8 @@
 	},
 	{
 		"id": "38edb13d-7097-4165-ae74-1af6d915d292",
-		"createdAt": "1664016606134",
-		"updatedAt": "1664027815578",
+		"createdAt": 1664016606134,
+		"updatedAt": 1664027815578,
 		"createdBy": "ole-andre.haugen@neptune-software.com",
 		"updatedBy": "ole-andre.haugen@neptune-software.com",
 		"status": 2,

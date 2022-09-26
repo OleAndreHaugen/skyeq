@@ -7,19 +7,19 @@
 	"entitySets": [
 		{
 			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
-			"name": "skyequeue_queues",
-			"contextname": "skyequeue_queues"
+			"name": "skyeq_queue",
+			"contextname": "skyeq_queue"
 		}
 	],
 	"apis": [],
 	"name": "masterdata",
-	"ver": "22.9.24.1212",
+	"ver": "22.9.25.1436",
 	"description": null,
 	"content": [
 		"==OBJECT STRING==",
 		"try {\r",
 		"\r",
-		"    result.data = await entities.skyequeue_queues.find();\r",
+		"    result.data = await entities.skyeq_queue.find();\r",
 		"\r",
 		"    complete();\r",
 		"\r",
@@ -38,7 +38,7 @@
 	"useAsGlobalScript": false,
 	"isTypescript": false,
 	"transpiledContent": null,
-	"lastRunSuccessful": false,
+	"lastRunSuccessful": true,
 	"jsscriptGroup": "3b0bf60c-66aa-41c4-8f02-34988872c104",
 	"package": "de916930-7bab-4416-b294-24cae145feab"
 }

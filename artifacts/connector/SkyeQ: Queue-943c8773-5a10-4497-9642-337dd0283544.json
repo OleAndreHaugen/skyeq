@@ -7,11 +7,11 @@
 		"hasDocumentation": false
 	},
 	"documentation": {},
-	"name": "SkyeQ: Queues",
+	"name": "SkyeQ: Queue",
 	"description": null,
 	"group": null,
 	"type": "T",
-	"ver": "22.9.24.942",
+	"ver": "22.9.25.1438",
 	"disabled": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab"
 }
