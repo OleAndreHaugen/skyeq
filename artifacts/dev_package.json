@@ -52,14 +52,7 @@
 			"description": "Skye Q Manager"
 		}
 	],
-	"api": [
-		{
-			"id": "a4086d27-e246-4e59-8059-9ef2a5c3990a",
-			"name": "SkyeQ Client",
-			"description": null,
-			"apiGroup": null
-		}
-	],
+	"api": [],
 	"odataSource": [],
 	"odataMock": [],
 	"dictionary": [
@@ -186,12 +179,12 @@
 	"launchpad": [
 		{
 			"id": "284e5787-00d1-4c46-acdb-64583ceada2e",
-			"name": "SkyeQ",
+			"name": "Skye Q Client",
 			"description": null
 		},
 		{
 			"id": "f19cd745-795f-42a1-bbe5-981294d2c6ad",
-			"name": "Skye Q Admin",
+			"name": "Skye Q Manager",
 			"description": null
 		}
 	],

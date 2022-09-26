@@ -25,32 +25,26 @@
 		},
 		"fieldCatalog": [
 			{
-				"name": "name",
-				"label": "Name",
-				"type": "mediumtext",
+				"name": "createdAt",
+				"label": "Created At",
+				"type": "timestamp",
 				"usage": "BOTH"
 			},
 			{
-				"name": "status",
-				"label": "Status",
-				"type": "integer",
-				"usage": "BOTH"
-			},
-			{
-				"name": "queue",
-				"label": "Queue",
-				"type": "smalltext",
-				"usage": "BOTH"
-			},
-			{
-				"name": "phone",
-				"label": "Phone",
-				"type": "mediumtext",
+				"name": "createdBy",
+				"label": "Created By",
+				"type": "text",
 				"usage": "BOTH"
 			},
 			{
 				"name": "email",
 				"label": "eMail",
+				"type": "mediumtext",
+				"usage": "BOTH"
+			},
+			{
+				"name": "name",
+				"label": "Name",
 				"type": "mediumtext",
 				"usage": "BOTH"
 			},
@@ -61,26 +55,32 @@
 				"usage": "BOTH"
 			},
 			{
+				"name": "phone",
+				"label": "Phone",
+				"type": "mediumtext",
+				"usage": "BOTH"
+			},
+			{
+				"name": "queue",
+				"label": "Queue",
+				"type": "smalltext",
+				"usage": "BOTH"
+			},
+			{
+				"name": "status",
+				"label": "Status",
+				"type": "integer",
+				"usage": "BOTH"
+			},
+			{
 				"name": "updatedAt",
 				"label": "Updated At",
 				"type": "timestamp",
 				"usage": "BOTH"
 			},
 			{
-				"name": "createdAt",
-				"label": "Created At",
-				"type": "timestamp",
-				"usage": "BOTH"
-			},
-			{
 				"name": "updatedBy",
 				"label": "Updated By",
-				"type": "text",
-				"usage": "BOTH"
-			},
-			{
-				"name": "createdBy",
-				"label": "Created By",
 				"type": "text",
 				"usage": "BOTH"
 			}
@@ -97,7 +97,7 @@
 				"valueType": "Lookup",
 				"valueLookup": {
 					"table": "skyeq_status",
-					"textField": "",
+					"textField": "name",
 					"keyField": [
 						{
 							"fieldName": "status",
@@ -117,7 +117,7 @@
 				"valueType": "Lookup",
 				"valueLookup": {
 					"table": "skyeq_queue",
-					"textField": "",
+					"textField": "name",
 					"keyField": [
 						{
 							"fieldName": "id",
@@ -149,7 +149,7 @@
 	"scriptSel": null,
 	"scriptRun": null,
 	"tableid": null,
-	"ver": "22.9.25.1439",
+	"ver": "22.9.26.1333",
 	"disabled": false,
 	"appType": "A",
 	"application": "planet9_adaptive_tile_chart",

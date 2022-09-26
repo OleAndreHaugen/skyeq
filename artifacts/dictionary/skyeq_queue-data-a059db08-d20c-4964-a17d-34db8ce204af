@@ -1,0 +1,22 @@
+[
+	{
+		"id": "f758fe24-e2f5-4403-b404-6812bf197d6b",
+		"createdAt": 1664109596854,
+		"updatedAt": 1664205080756,
+		"createdBy": "ole-andre.haugen@neptune-software.com",
+		"updatedBy": "ole-andre.haugen@neptune-software.com",
+		"name": "Food",
+		"description": "Order Food",
+		"icon": "sap-icon://meal"
+	},
+	{
+		"id": "c1baaa9c-f5bf-49cf-937d-2f3db9759eb5",
+		"createdAt": 1664109609262,
+		"updatedAt": 1664205045446,
+		"createdBy": "ole-andre.haugen@neptune-software.com",
+		"updatedBy": "ole-andre.haugen@neptune-software.com",
+		"name": "Drinks",
+		"description": "Order Drinks",
+		"icon": "sap-icon://fa-solid/glass-martini-alt"
+	}
+]

@@ -895,6 +895,17 @@
 													"value": "true",
 													"script": "",
 													"translation": []
+												},
+												{
+													"attribute": "updateFinished",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"const binding = this.getBinding(\"items\");\r",
+														"console.log(\"Change\")"
+													],
+													"translation": []
 												}
 											],
 											"data": [
@@ -978,6 +989,13 @@
 																			"translation": []
 																		},
 																		{
+																			"attribute": "styleClassMargin",
+																			"grouping": "Properties",
+																			"value": "sapUiTinyMarginTop",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
 																			"attribute": "level",
 																			"grouping": "Properties",
 																			"value": "H2",
@@ -1001,6 +1019,13 @@
 																			"attribute": "text",
 																			"grouping": "Properties",
 																			"value": "{Master>status}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "styleClassMargin",
+																			"grouping": "Properties",
+																			"value": "sapUiTinyMarginBottom",
 																			"script": "",
 																			"translation": []
 																		},
@@ -1042,7 +1067,7 @@
 														},
 														{
 															"fieldNo": "9117b29a-0b8f-482e-f24a-01f5ef78d0c0",
-															"fieldName": "txttabStatusupdatedAt",
+															"fieldName": "txttabStatuscreatedAt",
 															"fieldParent": "376fc1a6-fbf3-4ea7-ec0a-ccc940103cca",
 															"fieldType": "sap.m.Text",
 															"script": "",
@@ -1053,7 +1078,7 @@
 																{
 																	"attribute": "text",
 																	"grouping": "Properties",
-																	"value": "{Master>updatedAt}",
+																	"value": "{Master>createdAt}",
 																	"script": "",
 																	"translation": []
 																},
@@ -1063,13 +1088,13 @@
 																	"value": "Anonymous Function",
 																	"script": [
 																		"==OBJECT STRING==",
-																		"if (typeof (updatedAt) === \"undefined\" || updatedAt === null) { return; }\r",
+																		"if (typeof (createdAt) === \"undefined\" || createdAt === null) { return; }\r",
 																		"\r",
 																		"var oDateFormat = sap.ui.core.format.DateFormat.getDateTimeInstance({\r",
 																		"    relative: true\r",
 																		"});\r",
 																		"\r",
-																		"return oDateFormat.format(new Date(parseInt(updatedAt)));\r",
+																		"return oDateFormat.format(new Date(parseInt(createdAt)));\r",
 																		""
 																	],
 																	"translation": []
@@ -1193,27 +1218,6 @@
 							"response": [],
 							"attributes": [
 								{
-									"attribute": "setCacheType",
-									"grouping": "Model",
-									"value": "IndexedDB",
-									"script": "",
-									"translation": []
-								},
-								{
-									"attribute": "setEnableCache",
-									"grouping": "Model",
-									"value": "true",
-									"script": "",
-									"translation": []
-								},
-								{
-									"attribute": "setInitLoad",
-									"grouping": "Model",
-									"value": "cache",
-									"script": "",
-									"translation": []
-								},
-								{
 									"attribute": "setSizeLimit",
 									"grouping": "Model",
 									"value": "5000",
@@ -1238,7 +1242,7 @@
 					"data": [
 						{
 							"fieldNo": "535045d5-20c9-4ebd-cb77-33c9c4438681",
-							"fieldName": "EventClient",
+							"fieldName": "EventListener",
 							"fieldParent": "ccbb2b4a-6347-4cc5-c6d8-dab98b25c65e",
 							"fieldType": "neptune.events.Listener",
 							"script": "",
@@ -1305,8 +1309,8 @@
 								"==OBJECT STRING==",
 								"const SkyeQ = {\r",
 								"\r",
+								"    interval: null,\r",
 								"    data: null,\r",
-								"    processing: null,\r",
 								"    queue: null,\r",
 								"\r",
 								"    init: function () {\r",
@@ -1323,22 +1327,36 @@
 								"\r",
 								"        switch (payload.process) {\r",
 								"\r",
-								"            case 'initClient':\r",
+								"            case \"initClient\":\r",
 								"                modelMaster.setData(payload.data);\r",
-								"                setCacheMaster();\r",
+								"\r",
+								"                if (!SkyeQ.interval) {\r",
+								"                    SkyeQ.interval = setInterval(function () {\r",
+								"                        modelMaster.refresh(true);\r",
+								"                    }, 1000);\r",
+								"                }\r",
+								"\r",
 								"                break;\r",
 								"\r",
 								"            case \"enterQueue\":\r",
+								"                statusHeader.setIntro(SkyeQ.queue.name);\r",
+								"                statusHeader.setIcon(SkyeQ.queue.icon);\r",
+								"                tabStatus.getBinding(\"items\").filter([new sap.ui.model.Filter(\"queue\", \"EQ\", SkyeQ.queue.id), new sap.ui.model.Filter(\"status\", \"NE\", 3)]);\r",
+								"                oApp.to(oPageQueue);\r",
+								"\r",
 								"                SkyeQ.data = payload.data;\r",
-								"                ModelData.Add(modelMaster.oData.master, \"id\", payload.data.id);\r",
+								"                ModelData.Update(modelMaster.oData.master, \"id\", payload.data.id, payload.data);\r",
+								"                modelMaster.refresh(true);\r",
+								"                break;\r",
+								"\r",
+								"            case \"updateQueue\":\r",
+								"                ModelData.Update(modelMaster.oData.master, \"id\", payload.data.id, payload.data);\r",
+								"                modelMaster.refresh(true);\r",
 								"                break;\r",
 								"\r",
 								"            case 'leaveQueue':\r",
 								"                ModelData.Delete(modelMaster.oData.master, \"id\", payload.data.id);\r",
-								"                break;\r",
-								"\r",
-								"            case \"updateQueue\":\r",
-								"                ModelData.Update(modelMaster.oData.master, \"id\", payload.data.id);\r",
+								"                modelMaster.refresh(true);\r",
 								"                break;\r",
 								"\r",
 								"            default:\r",
@@ -1382,11 +1400,6 @@
 								"            }\r",
 								"        });\r",
 								"\r",
-								"        // Navigate\r",
-								"        statusHeader.setIntro(SkyeQ.queue.name);\r",
-								"        tabStatus.getBinding(\"items\").filter([new sap.ui.model.Filter(\"queue\", \"EQ\", SkyeQ.queue.id)]);\r",
-								"        oApp.to(oPageQueue);\r",
-								"\r",
 								"    }\r",
 								"\r",
 								"}\r",
@@ -1428,7 +1441,7 @@
 			"data": []
 		}
 	],
-	"ver": "22.9.26.826",
+	"ver": "22.9.26.1734",
 	"application": "skyeq_client",
 	"title": "Skye Q Client",
 	"description": "Skye Q Client",

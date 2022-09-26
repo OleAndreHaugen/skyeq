@@ -1,15 +1,13 @@
 {
-	"id": "f19cd745-795f-42a1-bbe5-981294d2c6ad",
-	"createdAt": "2022-09-24T09:57:34.387Z",
+	"id": "284e5787-00d1-4c46-acdb-64583ceada2e",
+	"createdAt": "2022-09-24T07:30:50.384Z",
 	"createdBy": "ole-andre.haugen@neptune-software.com",
 	"extUserRoles": [],
 	"extUserDepartments": [],
-	"catOrder": [
-		"132c2e25-4d86-461e-a802-36a2f01618f1"
-	],
+	"catOrder": [],
 	"layout": [
 		{
-			"id": "7bdc1632-122c-412d-8a35-6272003a9e1e",
+			"id": "3b9338d4-5dfa-4188-e693-af8baea23d5a",
 			"css": "",
 			"name": "Default",
 			"active": true,
@@ -21,34 +19,29 @@
 				"            background-repeat: no-repeat;",
 				"            background-size: cover;",
 				"        }",
-				"    .nepCatTitle.sapMTitle { color: white; }.nepCatSubTitle.sapMTitle { color: white !important; }</style>"
+				"    </style>"
 			],
 			"pageBackgroundImage": "https://bing.biturl.top/?resolution=1920&format=image",
-			"pageBackgroundColor": "rgba(0, 0, 0, 0.4)",
-			"textTitleColor": "white",
-			"textSubTitleColor": "white"
+			"pageBackgroundColor": "rgba(0, 0, 0, 0.4)"
 		}
 	],
 	"config": {
+		"showAppTitle": true,
 		"enhancement": "",
-		"showAppTitle": true
+		"hideTopHeader": false
 	},
 	"enhancement": [],
-	"name": "Skye Q Admin",
-	"title": "Skye Q Admin",
+	"name": "Skye Q Client",
+	"title": "Skye Q Client",
 	"description": null,
-	"startApp": null,
+	"startApp": "skyeq_client",
 	"startWebApp": null,
 	"customLogo": null,
 	"launchpadApp": "planet9_launchpad_standard",
 	"hideSidemenu": false,
 	"ui5Version": "1.102",
 	"ui5Theme": "sap_horizon_dark",
-	"header": [
-		"==OBJECT STRING==",
-		"<script type=\"text/javascript\" src=\"/public/highsuite/themes/dark-unica.js\"></script>\r",
-		""
-	],
+	"header": "<script src=\"/socket.io/socket.io.js\"></script>",
 	"customTheme": null,
 	"isExternal": null,
 	"emailPattern": null,
@@ -57,7 +50,7 @@
 	"firebaseProjectId": null,
 	"firebaseAppId": null,
 	"defaultLoginIDP": null,
-	"publicAccess": false,
+	"publicAccess": true,
 	"css": null,
 	"clientRequestTimeout": 120,
 	"limitWidth": false,
@@ -69,24 +62,17 @@
 	"usedBackgroundShade": null,
 	"searchEnableShadeCalc": null,
 	"usedEnableShadeCalc": null,
-	"enableTrace": false,
-	"ver": "22.9.24.1412",
-	"pwa_enable": false,
+	"enableTrace": true,
+	"ver": "22.9.26.1321",
+	"pwa_enable": true,
 	"pwa_customImageIos": null,
 	"pwa_customImageAndroidOld": null,
 	"pwa_customImageAndroidNew": null,
-	"pwa_displayMode": null,
-	"pwa_themeColor": null,
-	"pwa_backgroundColor": null,
+	"pwa_displayMode": "standalone",
+	"pwa_themeColor": "rgb(46,55,66)",
+	"pwa_backgroundColor": "rgb(46,55,66)",
 	"passwordResetEmail": null,
 	"activationCodeEmail": null,
 	"package": "de916930-7bab-4416-b294-24cae145feab",
-	"cat": [
-		{
-			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
-			"name": "Skye Q",
-			"title": "Skye Q",
-			"ver": "22.9.25.1437"
-		}
-	]
+	"cat": []
 }
