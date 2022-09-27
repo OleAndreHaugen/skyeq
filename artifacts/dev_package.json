@@ -36,7 +36,7 @@
 	},
 	"name": "com.neptune.skyeq",
 	"description": "Skye Q",
-	"ver": "22.9.26.833",
+	"ver": "22.9.26.1753",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -52,7 +52,14 @@
 			"description": "Skye Q Manager"
 		}
 	],
-	"api": [],
+	"api": [
+		{
+			"id": "9da81e33-c00c-4689-87cd-997958548dfd",
+			"name": "SkyeQ",
+			"description": null,
+			"apiGroup": null
+		}
+	],
 	"odataSource": [],
 	"odataMock": [],
 	"dictionary": [
@@ -74,38 +81,13 @@
 	],
 	"jsclass": [
 		{
-			"id": "001ea4b7-07f7-4b6d-966d-535720fd3108",
-			"name": "manager",
-			"description": null
-		},
-		{
-			"id": "fc436f99-8799-49f5-af3b-101a1abfdb24",
-			"name": "start",
-			"description": null
-		},
-		{
-			"id": "10dbea76-347c-40c1-8035-89b6afde4688",
-			"name": "leave",
-			"description": null
-		},
-		{
 			"id": "79f556cb-4373-451c-b627-40632b332f69",
 			"name": "masterdata",
 			"description": null
 		},
 		{
-			"id": "428a29ed-dde5-4149-8066-02e1729c9226",
-			"name": "setStatus",
-			"description": null
-		},
-		{
-			"id": "cfd65f6d-7788-4e24-a5d4-c11b00f051c5",
-			"name": "status",
-			"description": null
-		},
-		{
 			"id": "5428e56f-59f1-4653-92ce-8b8856067715",
-			"name": "serverHandler",
+			"name": "eventHandler",
 			"description": null
 		}
 	],

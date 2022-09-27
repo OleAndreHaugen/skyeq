@@ -835,6 +835,26 @@
 																				}
 																			],
 																			"data": []
+																		},
+																		{
+																			"fieldNo": "e21bf1a2-d81b-4a62-87a7-7a08aab24794",
+																			"fieldName": "gridProcessingNote",
+																			"fieldParent": "dfa54c1f-eb98-4773-dbbd-f75917f6d116",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{Master>note}",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
 																		}
 																	]
 																}
@@ -1024,7 +1044,15 @@
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
-																	"attributes": [],
+																	"attributes": [
+																		{
+																			"attribute": "enableCompactMode",
+																			"grouping": "Properties",
+																			"value": "true",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
 																	"data": [
 																		{
 																			"fieldNo": "1bedbf5b-441d-467c-c5c1-c762608e9810",
@@ -1221,6 +1249,33 @@
 																				}
 																			],
 																			"data": []
+																		},
+																		{
+																			"fieldNo": "b38bf014-a0c5-4205-b1e4-dba11102f2ca",
+																			"fieldName": "gridCompleteRating",
+																			"fieldParent": "55f1e3e3-ae7b-47e5-f882-5a6532879491",
+																			"fieldType": "sap.m.RatingIndicator",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "value",
+																					"grouping": "Properties",
+																					"value": "{Master>rating}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "displayOnly",
+																					"grouping": "Properties",
+																					"value": "true",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
 																		}
 																	]
 																}
@@ -1310,6 +1365,47 @@
 		{
 			"fieldNo": 99999,
 			"data": [
+				{
+					"fieldNo": "df1eaa0a-a4ef-4075-9eb3-c74f1628c06d",
+					"fieldName": "API",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "fd56b201-6d44-4840-d13b-5511ebf67f69",
+							"fieldName": "GetData",
+							"fieldParent": "df1eaa0a-a4ef-4075-9eb3-c74f1628c06d",
+							"fieldType": "neptune.restapi",
+							"script": "",
+							"customComponent": false,
+							"restSource": "9da81e33-c00c-4689-87cd-997958548dfd",
+							"restOperation": "4fd4c873-888b-4503-d92e-7b9489582839",
+							"request": [],
+							"response": [
+								{
+									"status": "200",
+									"dataId": "8f2843cc-77dc-4e86-a8e0-cb3fedc08e83",
+									"modelFieldNo": "8919681c-2eb1-4756-8ede-71f0b942e1ec"
+								}
+							],
+							"attributes": [
+								{
+									"attribute": "setInitLoad",
+									"grouping": "Model",
+									"value": "online",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
 				{
 					"fieldNo": "b64d59a8-9542-4678-94a9-c281f5eb77f8",
 					"fieldName": "Data",
@@ -1430,9 +1526,10 @@
 								"\r",
 								"    init: function () {\r",
 								"\r",
-								"        triggerEventServer({\r",
-								"            process: \"initClient\",\r",
-								"        })\r",
+								"        // Udate timestamp\r",
+								"        SkyeQ.interval = setInterval(function () {\r",
+								"            modelMaster.refresh(true);\r",
+								"        }, 1000);\r",
 								"\r",
 								"    },\r",
 								"\r",
@@ -1440,19 +1537,9 @@
 								"\r",
 								"        switch (payload.process) {\r",
 								"\r",
-								"            case \"initClient\":\r",
-								"                modelMaster.setData(payload.data);\r",
-								"\r",
-								"                if (!SkyeQ.interval) {\r",
-								"                    SkyeQ.interval = setInterval(function () {\r",
-								"                        modelMaster.refresh(true);\r",
-								"                    }, 1000);\r",
-								"                }\r",
-								"\r",
-								"                break;\r",
-								"\r",
 								"            case \"updateQueue\":\r",
 								"            case \"enterQueue\":\r",
+								"            case \"rateOrder\":\r",
 								"                ModelData.Update(modelMaster.oData.master, \"id\", payload.data.id, payload.data);\r",
 								"                modelMaster.refresh(true);\r",
 								"                break;\r",
@@ -1556,7 +1643,7 @@
 			"data": []
 		}
 	],
-	"ver": "22.9.26.1750",
+	"ver": "22.9.27.1015",
 	"application": "skyeq_manager",
 	"title": "Skye Q Manager",
 	"description": "Skye Q Manager",
@@ -1601,6 +1688,12 @@
 	"ui5_ionic": false,
 	"useV2AppHandler": true,
 	"compilerTarget": 3,
-	"apis": [],
+	"apis": [
+		{
+			"id": "9da81e33-c00c-4689-87cd-997958548dfd",
+			"name": "SkyeQ",
+			"ver": "22.9.27.710"
+		}
+	],
 	"package": "de916930-7bab-4416-b294-24cae145feab"
 }

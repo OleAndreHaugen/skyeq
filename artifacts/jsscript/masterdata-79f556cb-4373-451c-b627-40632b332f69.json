@@ -6,20 +6,38 @@
 	"externalModules": [],
 	"entitySets": [
 		{
+			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
+			"name": "skyeq_master",
+			"contextname": "skyeq_master"
+		},
+		{
 			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
 			"name": "skyeq_queue",
 			"contextname": "skyeq_queue"
+		},
+		{
+			"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
+			"name": "skyeq_status",
+			"contextname": "skyeq_status"
 		}
 	],
 	"apis": [],
 	"name": "masterdata",
-	"ver": "22.9.25.1436",
+	"ver": "22.9.27.928",
 	"description": null,
 	"content": [
 		"==OBJECT STRING==",
 		"try {\r",
 		"\r",
-		"    result.data = await entities.skyeq_queue.find();\r",
+		"    result.data = {\r",
+		"        status: await entities.skyeq_status.find(),\r",
+		"        queue: await entities.skyeq_queue.find(),\r",
+		"        master: await entities.skyeq_master.find({\r",
+		"            select: [\"id\", \"name\", \"note\", \"createdAt\", \"status\", \"queue\", \"identifier\", \"rating\"],\r",
+		"            order: { createdAt: \"ASC\" },\r",
+		"            cache: false\r",
+		"        }),\r",
+		"    }\r",
 		"\r",
 		"    complete();\r",
 		"\r",

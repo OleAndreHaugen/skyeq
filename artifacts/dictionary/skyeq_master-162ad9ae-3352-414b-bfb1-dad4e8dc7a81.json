@@ -44,13 +44,27 @@
 			"fieldType": "text",
 			"isNullable": true,
 			"description": "Note"
+		},
+		{
+			"id": "6840af7e-83a8-4a3c-ebca-6cd3b73d7924",
+			"fieldName": "identifier",
+			"fieldType": "smalltext",
+			"description": "Unique Identifier",
+			"isNullable": true
+		},
+		{
+			"id": "4415cb82-1c37-4537-8986-cdffb9ecc7e1",
+			"fieldName": "rating",
+			"fieldType": "smalltext",
+			"description": "Rating",
+			"isNullable": true
 		}
 	],
 	"indices": [],
 	"foreignKeys": [],
 	"name": "skyeq_master",
 	"description": "SkyeQ: Master",
-	"ver": "22.9.25.1420",
+	"ver": "22.9.27.923",
 	"enableAudit": false,
 	"includeDataInPackage": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab",
