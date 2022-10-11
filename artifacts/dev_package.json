@@ -44,12 +44,6 @@
 			"application": "skyeq_client",
 			"title": "Skye Q Client",
 			"description": "Skye Q Client"
-		},
-		{
-			"id": "3134cb67-bdac-4f2a-9c32-1beb5dfcc8cf",
-			"application": "skyeq_manager",
-			"title": "Skye Q Manager",
-			"description": "Skye Q Manager"
 		}
 	],
 	"api": [
@@ -194,5 +188,6 @@
 			"name": "SkyeQ: Status",
 			"description": null
 		}
-	]
+	],
+	"events": []
 }

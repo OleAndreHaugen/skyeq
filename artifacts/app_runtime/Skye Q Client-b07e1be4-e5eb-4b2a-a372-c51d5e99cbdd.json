@@ -2084,6 +2084,7 @@
 	"ui5_theme": "sap_horizon_dark",
 	"ui5_version": "1.102",
 	"ui5_language": null,
+	"ui5_url": null,
 	"cus_theme": "",
 	"css": [
 		"==OBJECT STRING==",
