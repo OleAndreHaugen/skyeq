@@ -1852,8 +1852,8 @@
 			"data": []
 		}
 	],
-	"componentInterface": null,
-	"ver": "22.9.27.1014",
+	"componentInterface": [],
+	"ver": "22.11.23.1241",
 	"application": "skyeq_client",
 	"title": "Skye Q Client",
 	"description": "Skye Q Client",
@@ -1873,9 +1873,9 @@
 	"ui5_uxap": false,
 	"ui5_chart": false,
 	"ui5_theme": "sap_horizon_dark",
-	"ui5_version": "1.102",
+	"ui5_version": "1.108",
 	"ui5_language": null,
-	"ui5_url": null,
+	"ui5_url": "",
 	"cus_theme": "",
 	"css": "file:///css.script",
 	"header": "",

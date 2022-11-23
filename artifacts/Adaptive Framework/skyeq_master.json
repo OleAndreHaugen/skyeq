@@ -38,7 +38,8 @@
 				"searchLabel": "Search",
 				"searchPlaceholder": "",
 				"title": "Skye Q",
-				"subTitle": "Overview"
+				"subTitle": "Overview",
+				"actionButtonLeft": false
 			},
 			"form": {
 				"enableCompact": false,
@@ -60,31 +61,38 @@
 				"enableAction2": false,
 				"enableAction3": false,
 				"fixedLayout": false,
-				"inset": false
+				"inset": false,
+				"showSeparators": "All"
 			}
 		},
 		"fieldCatalog": [
 			{
-				"name": "createdAt",
-				"label": "Created At",
-				"type": "timestamp",
+				"name": "name",
+				"label": "Name",
+				"type": "mediumtext",
 				"usage": "BOTH"
 			},
 			{
-				"name": "createdBy",
-				"label": "Created By",
-				"type": "text",
+				"name": "status",
+				"label": "Status",
+				"type": "integer",
+				"usage": "BOTH"
+			},
+			{
+				"name": "queue",
+				"label": "Queue",
+				"type": "smalltext",
+				"usage": "BOTH"
+			},
+			{
+				"name": "phone",
+				"label": "Phone",
+				"type": "mediumtext",
 				"usage": "BOTH"
 			},
 			{
 				"name": "email",
 				"label": "eMail",
-				"type": "mediumtext",
-				"usage": "BOTH"
-			},
-			{
-				"name": "name",
-				"label": "Name",
 				"type": "mediumtext",
 				"usage": "BOTH"
 			},
@@ -95,21 +103,15 @@
 				"usage": "BOTH"
 			},
 			{
-				"name": "phone",
-				"label": "Phone",
-				"type": "mediumtext",
-				"usage": "BOTH"
-			},
-			{
-				"name": "queue",
-				"label": "Queue",
+				"name": "identifier",
+				"label": "Unique Identifier",
 				"type": "smalltext",
 				"usage": "BOTH"
 			},
 			{
-				"name": "status",
-				"label": "Status",
-				"type": "integer",
+				"name": "rating",
+				"label": "Rating",
+				"type": "smalltext",
 				"usage": "BOTH"
 			},
 			{
@@ -119,8 +121,20 @@
 				"usage": "BOTH"
 			},
 			{
+				"name": "createdAt",
+				"label": "Created At",
+				"type": "timestamp",
+				"usage": "BOTH"
+			},
+			{
 				"name": "updatedBy",
 				"label": "Updated By",
+				"type": "text",
+				"usage": "BOTH"
+			},
+			{
+				"name": "createdBy",
+				"label": "Created By",
 				"type": "text",
 				"usage": "BOTH"
 			}
@@ -143,7 +157,7 @@
 				"name": "status",
 				"text": "Status",
 				"fieldPos": 2,
-				"type": "",
+				"type": "ObjectStatus",
 				"lookupTable": "skyequeue_status",
 				"lookupFieldKey": "status",
 				"lookupFieldText": "name",
@@ -151,8 +165,22 @@
 				"editable": true,
 				"valueType": "Lookup",
 				"valueLookup": {
-					"table": "skyequeue_status",
+					"table": "skyeq_status",
 					"textField": "name",
+					"keyField": [
+						{
+							"fieldName": "status",
+							"key": "status",
+							"value": ""
+						}
+					],
+					"hideKey": true,
+					"butType": "Accept"
+				},
+				"statusStateType": "Lookup",
+				"statusStateLookup": {
+					"table": "skyeq_status",
+					"textField": "state",
 					"keyField": [
 						{
 							"fieldName": "status",
@@ -173,7 +201,7 @@
 				"fieldPos": 3,
 				"valueType": "Lookup",
 				"valueLookup": {
-					"table": "skyequeue_queues",
+					"table": "skyeq_queue",
 					"textField": "name",
 					"keyField": [
 						{
@@ -238,7 +266,7 @@
 	"scriptSel": null,
 	"scriptRun": null,
 	"tableid": null,
-	"ver": "22.9.24.1240",
+	"ver": "22.11.23.1248",
 	"disabled": false,
 	"appType": "A",
 	"application": "planet9_adaptive_list",
