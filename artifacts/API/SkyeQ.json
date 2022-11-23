@@ -663,7 +663,7 @@
 	"documentation": [],
 	"name": "SkyeQ",
 	"endpoint": "/public/serverscript/skyeq",
-	"ver": "22.10.25.925",
+	"ver": "22.9.27.710",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,
@@ -681,7 +681,7 @@
 	"tlsAllowUntrusted": false,
 	"useOwnProcess": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab",
-	"apiGroup": "d5200ac2-2101-46f3-94e9-a16eb9abc199",
+	"apiGroup": null,
 	"apiFormat": 0,
 	"roles": []
 }

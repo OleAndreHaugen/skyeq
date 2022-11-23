@@ -49,7 +49,8 @@
 	"header": [
 		"==OBJECT STRING==",
 		"<script type=\"text/javascript\" src=\"/public/highsuite/themes/dark-unica.js\"></script>\r",
-		"<script src=\"/socket.io/socket.io.js\"></script>"
+		"<script src=\"/socket.io/socket.io.js\"></script>\r",
+		"<link rel=\"stylesheet\" href=\"/public/css/neptune.css\" type=\"text/css\" charset=\"utf-8\">"
 	],
 	"customTheme": null,
 	"isExternal": null,
@@ -72,7 +73,7 @@
 	"searchEnableShadeCalc": null,
 	"usedEnableShadeCalc": null,
 	"enableTrace": false,
-	"ver": "22.11.23.843",
+	"ver": "22.11.23.1236",
 	"pwa_enable": false,
 	"pwa_customImageIos": null,
 	"pwa_customImageAndroidOld": null,
@@ -88,7 +89,7 @@
 			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
 			"name": "Skye Q",
 			"title": "Skye Q",
-			"ver": "22.9.25.1437"
+			"ver": "22.9.27.140"
 		}
 	]
 }

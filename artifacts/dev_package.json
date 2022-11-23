@@ -8,8 +8,8 @@
 		"testServers": []
 	},
 	"name": "com.neptune.skyeq",
-	"description": "Event Driven Handling Demo",
-	"ver": "22.11.23.843",
+	"description": "Skye Q",
+	"ver": "22.11.23.1236",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -24,7 +24,7 @@
 			"id": "9da81e33-c00c-4689-87cd-997958548dfd",
 			"name": "SkyeQ",
 			"description": null,
-			"apiGroup": "d5200ac2-2101-46f3-94e9-a16eb9abc199"
+			"apiGroup": null
 		}
 	],
 	"odataSource": [],
@@ -95,13 +95,7 @@
 		}
 	],
 	"api_authentication": [],
-	"api_group": [
-		{
-			"id": "d5200ac2-2101-46f3-94e9-a16eb9abc199",
-			"name": "SkyeQ",
-			"description": null
-		}
-	],
+	"api_group": [],
 	"tile": [
 		{
 			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
@@ -168,5 +162,20 @@
 			"description": null
 		}
 	],
-	"events": []
+	"events": [
+		{
+			"id": "e9c05829-3937-4181-aa8a-0941c70ed413",
+			"updatedAt": "2022-11-23T11:36:55.000Z",
+			"changedBy": "ole-andre.haugen@neptune-software.com",
+			"name": "SkyeQClient",
+			"description": "Client Events"
+		},
+		{
+			"id": "71d16504-ca2e-45d8-89da-bbcfe389ec97",
+			"updatedAt": "2022-11-23T11:37:03.000Z",
+			"changedBy": "ole-andre.haugen@neptune-software.com",
+			"name": "SkyeQServer",
+			"description": "Server Events"
+		}
+	]
 }
