@@ -1,0 +1,36 @@
+{
+	"id": "5428e56f-59f1-4653-92ce-8b8856067715",
+	"createdAt": "2022-09-25T14:37:56.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "162ad9ae-3352-414b-bfb1-dad4e8dc7a81",
+			"name": "skyeq_master",
+			"contextname": "skyeq_master"
+		},
+		{
+			"id": "a059db08-d20c-4964-a17d-34db8ce204af",
+			"name": "skyeq_queue",
+			"contextname": "skyeq_queue"
+		},
+		{
+			"id": "7eb1387e-c27c-4a18-b763-ce884649aa63",
+			"name": "skyeq_status",
+			"contextname": "skyeq_status"
+		}
+	],
+	"apis": [],
+	"name": "eventHandler",
+	"ver": "22.9.27.947",
+	"description": null,
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": true,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "3b0bf60c-66aa-41c4-8f02-34988872c104",
+	"package": "de916930-7bab-4416-b294-24cae145feab"
+}

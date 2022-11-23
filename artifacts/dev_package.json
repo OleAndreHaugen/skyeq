@@ -5,38 +5,11 @@
 	"git": {
 		"targetServers": [],
 		"remote": "https://github.com/OleAndreHaugen/skyeq.git",
-		"testServers": [],
-		"packageJSON": [
-			"==OBJECT STRING==",
-			"{",
-			"  \"name\": \"com.neptune.skyeq\",",
-			"  \"version\": \"1.0.0\",",
-			"  \"description\": \"Skye Q\",",
-			"  \"author\": \"Neptune Software\",",
-			"  \"license\": \"LicenseRef-LICENSE\",",
-			"  \"private\": true,",
-			"  \"scripts\": {",
-			"    \"deploy\": \"ts-node src/deploy.ts\",",
-			"    \"test\": \"jest --passWithNoTests\"",
-			"  },",
-			"  \"engines\": {",
-			"    \"node\": \"18\"",
-			"  },",
-			"  \"devDependencies\": {",
-			"    \"@types/jest\": \"^26.0.23\",",
-			"    \"typescript\": \"^4.2.3\",",
-			"    \"ts-node\": \"^10.0.0\",",
-			"    \"axios\": \"^0.21.1\",",
-			"    \"jest\": \"^27.0.4\",",
-			"    \"ts-jest\": \"^27.0.3\"",
-			"  }",
-			"}",
-			""
-		]
+		"testServers": []
 	},
-	"name": "com.neptune.skyeq",
-	"description": "Skye Q",
-	"ver": "22.9.26.1753",
+	"name": "com.neptune.edademo",
+	"description": "Event Driven Handling Demo",
+	"ver": "22.11.23.840",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -51,7 +24,7 @@
 			"id": "9da81e33-c00c-4689-87cd-997958548dfd",
 			"name": "SkyeQ",
 			"description": null,
-			"apiGroup": null
+			"apiGroup": "d5200ac2-2101-46f3-94e9-a16eb9abc199"
 		}
 	],
 	"odataSource": [],
@@ -103,12 +76,6 @@
 			"application": "planet9_adaptive_list"
 		},
 		{
-			"id": "0932ae93-30af-4079-b810-aef0a148a5c0",
-			"name": "skyeq_status",
-			"description": "",
-			"application": "planet9_adaptive_list"
-		},
-		{
 			"id": "8dfc29f8-81a4-4196-8e22-2785dae978f2",
 			"name": "skyeq_master",
 			"description": "",
@@ -119,10 +86,22 @@
 			"name": "skyeq_tile_stats",
 			"description": "",
 			"application": "planet9_adaptive_tile_chart"
+		},
+		{
+			"id": "0932ae93-30af-4079-b810-aef0a148a5c0",
+			"name": "skyeq_status",
+			"description": "",
+			"application": "planet9_adaptive_list"
 		}
 	],
 	"api_authentication": [],
-	"api_group": [],
+	"api_group": [
+		{
+			"id": "d5200ac2-2101-46f3-94e9-a16eb9abc199",
+			"name": "SkyeQ",
+			"description": null
+		}
+	],
 	"tile": [
 		{
 			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
@@ -130,37 +109,37 @@
 			"name": "Skye Q Queues"
 		},
 		{
-			"id": "2f9b0f64-ebb8-4b8f-9bd1-31aa8011c9c4",
-			"description": null,
-			"name": "Skye Q Status"
-		},
-		{
 			"id": "7905de68-88e6-4efe-88ea-21b23d3827e3",
 			"description": null,
 			"name": "Skye Q Manager"
+		},
+		{
+			"id": "2f9b0f64-ebb8-4b8f-9bd1-31aa8011c9c4",
+			"description": null,
+			"name": "Skye Q Status"
 		}
 	],
 	"category": [
 		{
-			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
-			"description": null,
-			"name": "Skye Q"
-		},
-		{
 			"id": "8ad76ab1-008b-46b5-9e48-cda270b3b675",
 			"description": null,
 			"name": "Skye Q Master Data"
+		},
+		{
+			"id": "132c2e25-4d86-461e-a802-36a2f01618f1",
+			"description": null,
+			"name": "Skye Q"
 		}
 	],
 	"launchpad": [
 		{
-			"id": "284e5787-00d1-4c46-acdb-64583ceada2e",
-			"name": "Skye Q Client",
+			"id": "f19cd745-795f-42a1-bbe5-981294d2c6ad",
+			"name": "Skye Q Manager",
 			"description": null
 		},
 		{
-			"id": "f19cd745-795f-42a1-bbe5-981294d2c6ad",
-			"name": "Skye Q Manager",
+			"id": "284e5787-00d1-4c46-acdb-64583ceada2e",
+			"name": "Skye Q Client",
 			"description": null
 		}
 	],

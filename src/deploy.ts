@@ -1,81 +1,30 @@
+/**
+ * Example deployment file.
+ */
+
 import axios from "axios";
 import * as https from 'https';
 import * as path from 'path';
-import * as fs from "fs";
+import * as fs from 'fs';
 
-const servers = (process.env.P9_SERVER_URL && process.env.P9_SERVER_TOKEN)
-    ? [{url: process.env.P9_SERVER_URL, token: process.env.P9_SERVER_TOKEN}]
-    : JSON.parse(`[]`);
+const serverUrl = process.env.DXP_OE_SERVER_URL;
+const serverToken = process.env.DXP_OE_SERVER_TOKEN;
+const githubToken = process.env.GITHUB_TOKEN;
 
-const agent = new https.Agent({
+const deleteUrl = (server: string) => `${server}/api/functions/Package/DelPackageAndArtifacts`
+const cloneUrl = (server: string) => `${server}/api/functions/Package/CloneRepository`;
+const getUrl = (server: string) => `${server}/api/functions/Package/Get`;
+const importUrl = (server: string) => `${server}/api/functions/Package/ImportRepository`;
+
+const httpsAgent = new https.Agent({
     rejectUnauthorized: false
 });
 
-const packageRelationsAndEntityType: {
-    name: string;
-    entity: string;
-    entityName?: string;
-    relations?: string[];
-    dependencies?: string[];
-}[] = [
-    { name: 'role', entity: 'role', entityName: 'Role' },
-    { name: 'wf_notifications', entity: 'wf_notifications', entityName: 'Email Template' },
-    { name: 'certificates', entity: 'certificates', entityName: 'Certificates' },
-    { name: 'odataMock', entity: 'odata_mockdata', entityName: 'oDataMock' },
-    { name: 'theme', entity: 'theme', entityName: 'Theme' },
-    { name: 'pdf', entity: 'pdf', entityName: 'PDF' },
-    { name: 'doc', entity: 'doc', entityName: 'Documentation' },
-    { name: 'jsscript_group', entity: 'jsscript_group', entityName: 'Script Project' },
-    { name: 'script_scheduler', entity: 'script_scheduler', entityName: 'Script' },
-    { name: 'wf_definition', entity: 'wf_definition', entityName: 'Workflow' },
-    {
-        name: 'api_authentication',
-        entity: 'api_authentication',
-        entityName: 'API Authentication',
-    },
-    { name: 'systems', entity: 'systems', entityName: 'Remote Systems' },
-
-    { name: 'api_group', entity: 'api_group', entityName: 'API Group' },
-    { name: 'api', entity: 'api', entityName: 'API', relations: ['roles'] },
-    { name: 'jsclass', entity: 'jsscript', entityName: 'Script' },
-    { name: 'odataSource', entity: 'odata_source', entityName: 'oDataSource' },
-    { name: 'connector', entity: 'connector', entityName: 'Connector' },
-    {
-        name: 'rulesengine',
-        entity: 'rulesengine',
-        entityName: 'Rules Engine',
-        relations: ['roles'],
-    },
-    { name: 'department', entity: 'department', entityName: 'Group', relations: ['roles'] },
-    { name: 'tile', entity: 'tile', entityName: 'Tile', relations: ['roles'] },
-    {
-        name: 'dictionary',
-        entity: 'dictionary',
-        entityName: 'Table',
-        relations: ['rolesRead', 'rolesWrite'],
-    },
-    {
-        name: 'apps',
-        entity: 'app_runtime',
-        entityName: 'Application',
-        relations: ['apis'],
-    },
-    {
-        name: 'category',
-        entity: 'category',
-        entityName: 'Tile Group',
-        relations: ['roles', 'tiles'],
-    },
-    { name: 'launchpad', entity: 'launchpad', entityName: 'Launchpad', relations: ['cat'] },
-    {
-        name: 'reports',
-        entity: 'reports',
-        entityName: 'Adaptive Framework',
-        relations: ['roles', 'scriptSelObj', 'scriptRunObj', 'tableObj'],
-    },
-];
-
-const artifactsPath = path.join(process.cwd(), 'artifacts');
+async function axiosPost(url: string, data: unknown, config: Record<string, unknown> = {}) {
+    return axios.post(url, data, { httpsAgent, headers: {
+            'Authorization': `Bearer ${serverToken}`,
+        }, ...config});
+}
 
 async function readFile(
     path: fs.PathLike,
@@ -89,48 +38,51 @@ async function readFile(
 }
 
 async function readPackageFile() {
-    const content = await readFile(path.join(artifactsPath, 'dev_package.json'), 'utf-8') as string;
+    const content = await readFile(path.join(path.join(process.cwd(), 'artifacts'), 'dev_package.json'), 'utf-8') as string;
     return JSON.parse(content);
 }
 
-async function deployPackageFile(devPackage, url, token) {
+async function getPackageFromServer(id: string): Promise<boolean> {
     try {
-        await axios.post(`${url}/api/functions/Package/SaveDeployPackage`, devPackage, {
-            httpsAgent: agent,
-            headers: {
-                'Authorization': `Bearer ${token}`,
-            }
-        });
+        await axiosPost(getUrl(serverUrl), { id });
+        return true;
     } catch (e) {
-        console.log(`Error sending development package to: ${url}`, e);
+        if (e.response.status === 404) {
+            return false;
+        }
+        console.error('Error getting package from server');
+        throw e;
     }
 }
 
 (async () => {
     try {
         const devPackage = await readPackageFile();
+        const id = devPackage.id;
+        const url = devPackage.git.remote;
 
-        for (let i = 0; i < packageRelationsAndEntityType.length; i++) {
-
-            const artifactType = packageRelationsAndEntityType[i];
-            const artifacts = devPackage[artifactType.name];
-
-            if (!artifacts?.length) continue;
-
-            const artifactTypePath = path.join(artifactsPath, artifactType.entityName);
-            for (let y = 0; y < artifacts.length; y++) {
-                const artifact = artifacts[y]
-                const filename = `${artifact.name || artifact.title || artifact.application}-${artifact.id}`;
-                devPackage[artifactType.name][y] = JSON.parse(await readFile(path.join(artifactTypePath, filename) + '.json', 'utf-8') as string);
+        const packageExists = await getPackageFromServer(id);
+        if (!packageExists) {
+            console.log('Package does not exist on server, cloning...');
+            const cloneResult = await axiosPost(cloneUrl(serverUrl), {url, auth: {authType: 1, token: githubToken}});
+            console.log('Package has been cloned on server');
+            const errorLog = cloneResult.data.importLog.data.filter(entry => entry.transferStatus === 'Error');
+            if (errorLog.length > 0) {
+                console.warn(`One or more artifacts failed to deploy`, errorLog);
             }
+            return process.exit(0);
         }
 
-        for (let i = 0; i < servers.length; i++) {
-            await deployPackageFile(devPackage, servers[i].url, servers[i].token);
+        console.log('Package exists on server, importing...');
+        const importResult = await axiosPost(importUrl(serverUrl), {id, branch: 'master', auth: {authType: 1, token: githubToken}, forceUpdate: true});
+        console.log('Package has been imported on server');
+        const errorLog = importResult.data.importLog.data.filter(entry => entry.transferStatus === 'Error');
+        if (errorLog.length > 0) {
+            console.warn(`One or more artifacts failed to deploy`, errorLog);
         }
-        console.log('Package has been deployed');
+
     } catch (e) {
-        console.log('Failed to deploy package', e);
+        console.error('Failed to deploy package', e);
     }
     process.exit(0);
 })();
