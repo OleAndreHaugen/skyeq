@@ -1853,7 +1853,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.11.23.1241",
+	"ver": "22.11.23.1254",
 	"application": "skyeq_client",
 	"title": "Skye Q Client",
 	"description": "Skye Q Client",
@@ -1884,7 +1884,7 @@
 	"deleted": false,
 	"libHighchart": false,
 	"libHighmap": false,
-	"publicAccess": true,
+	"publicAccess": false,
 	"ui5_bootstrap": false,
 	"ui5_ionic": false,
 	"useV2AppHandler": true,
