@@ -9,7 +9,7 @@
 	},
 	"name": "com.neptune.skyeq",
 	"description": "Skye Q",
-	"ver": "22.11.23.1236",
+	"ver": "22.11.23.1426",
 	"enableCICD": true,
 	"apps": [
 		{

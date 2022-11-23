@@ -13,7 +13,7 @@
 		{
 			"id": "498ebf02-ca9a-4cba-c480-bf8f5e4037cc",
 			"fieldName": "status",
-			"fieldType": "integer",
+			"fieldType": "smalltext",
 			"isNullable": true,
 			"description": "Status"
 		},
@@ -64,7 +64,7 @@
 	"foreignKeys": [],
 	"name": "skyeq_master",
 	"description": "SkyeQ: Master",
-	"ver": "22.9.27.923",
+	"ver": "22.11.23.1457",
 	"enableAudit": false,
 	"includeDataInPackage": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab",

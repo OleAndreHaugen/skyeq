@@ -5,7 +5,7 @@
 		"updatedAt": 1664024285189,
 		"createdBy": "ole-andre.haugen@neptune-software.com",
 		"updatedBy": "ole-andre.haugen@neptune-software.com",
-		"status": 1,
+		"status": "1",
 		"name": "Waiting",
 		"state": "Warning"
 	},
@@ -15,7 +15,7 @@
 		"updatedAt": 1664027812921,
 		"createdBy": "ole-andre.haugen@neptune-software.com",
 		"updatedBy": "ole-andre.haugen@neptune-software.com",
-		"status": 3,
+		"status": "3",
 		"name": "Completed",
 		"state": "Success"
 	},
@@ -25,7 +25,7 @@
 		"updatedAt": 1664027815578,
 		"createdBy": "ole-andre.haugen@neptune-software.com",
 		"updatedBy": "ole-andre.haugen@neptune-software.com",
-		"status": 2,
+		"status": "2",
 		"name": "Processing",
 		"state": "Information"
 	}
