@@ -1,0 +1,11 @@
+let oDraggedControl = oEvent.getParameter('draggedControl');
+let oDraggedContext = oDraggedControl.getBindingContext('Master');
+
+let oDraggedData = oDraggedContext.getObject();
+
+oDraggedData.status = 3;
+
+triggerEventServer({
+    process: "updateQueue",
+    data: oDraggedData
+});

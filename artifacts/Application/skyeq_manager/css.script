@@ -1,0 +1,17 @@
+.gridTime {
+    color: #a9b4be;
+    font-size: 12px;
+}
+
+.gridIcon {
+    color: #475566;
+}
+
+.gridCard .sapMPanelContent {
+    background: var(--nepBorderColor);
+}
+
+.sapUiLoSplitter.sapUiLoSplitterH>.sapUiLoSplitterBar,
+.sapUiLoSplitter.sapUiLoSplitterH>.sapUiLoSplitterOverlay .sapUiLoSplitterOverlayBar {
+    background: transparent;
+}

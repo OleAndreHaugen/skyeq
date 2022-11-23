@@ -1,0 +1,3 @@
+if (typeof queue === "undefined" || queue === null || queue === "") { return; }
+var rec = ModelData.FindFirst(modelMaster.oData.queue, "id", queue);
+return rec.icon;
