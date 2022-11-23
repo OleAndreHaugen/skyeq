@@ -7,9 +7,9 @@
 		"remote": "https://github.com/OleAndreHaugen/skyeq.git",
 		"testServers": []
 	},
-	"name": "com.neptune.edademo",
+	"name": "com.neptune.skyeq",
 	"description": "Event Driven Handling Demo",
-	"ver": "22.11.23.840",
+	"ver": "22.11.23.843",
 	"enableCICD": true,
 	"apps": [
 		{
