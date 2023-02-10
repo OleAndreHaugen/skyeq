@@ -1,0 +1,15 @@
+{
+	"id": "7d743c6e-0bca-40e7-bc37-99f826c4ebc8",
+	"createdAt": "2022-09-25T14:24:43.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"name": "SkyeQClient",
+	"description": null,
+	"eventAction": "AppEvent",
+	"scriptId": null,
+	"jobId": null,
+	"workflowId": null,
+	"package": "de916930-7bab-4416-b294-24cae145feab",
+	"script": null,
+	"job": null,
+	"workflow": null
+}
