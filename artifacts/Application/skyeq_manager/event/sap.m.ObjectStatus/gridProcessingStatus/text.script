@@ -1,3 +1,0 @@
-if (typeof status === "undefined" || status === null || status === "") { return; }
-var rec = ModelData.FindFirst(modelMaster.oData.status, "status", status);
-return rec.name;

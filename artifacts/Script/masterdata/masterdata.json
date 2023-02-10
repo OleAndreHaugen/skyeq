@@ -25,7 +25,7 @@
 	"name": "masterdata",
 	"ver": "22.9.27.928",
 	"description": null,
-	"content": "file:///content.script",
+	"content": "file:///content.js",
 	"useAsGlobalScript": false,
 	"transpiledContent": null,
 	"lastRunSuccessful": true,

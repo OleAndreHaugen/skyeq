@@ -6,7 +6,7 @@
 		{
 			"id": "41ff872d-ac56-4e70-9950-9c02ef3fabc0",
 			"fieldName": "status",
-			"fieldType": "smalltext",
+			"fieldType": "integer",
 			"description": "Status",
 			"isNullable": true
 		},
@@ -29,7 +29,7 @@
 	"foreignKeys": [],
 	"name": "skyeq_status",
 	"description": "SkyeQ: Status",
-	"ver": "22.11.23.1457",
+	"ver": "22.9.25.1421",
 	"enableAudit": false,
 	"includeDataInPackage": true,
 	"package": "de916930-7bab-4416-b294-24cae145feab",

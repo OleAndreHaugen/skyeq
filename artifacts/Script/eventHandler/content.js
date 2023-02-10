@@ -10,7 +10,8 @@ try {
     switch (payload.process) {
 
         case "updateQueue":
-            EventRes.data = await entities.skyeq_master.save(payload.data);
+            const recUpdate = await entities.skyeq_master.save(payload.data);
+            EventRes.data = await entities.skyeq_master.findOne(recUpdate);
             break;
 
         case "leaveQueue":

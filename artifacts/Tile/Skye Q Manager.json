@@ -21,7 +21,7 @@
 	"actionURL": "",
 	"openDialog": false,
 	"openWindow": false,
-	"openFullscreen": false,
+	"openFullscreen": true,
 	"forceRow": false,
 	"frameType": null,
 	"type": "adaptive",
@@ -61,7 +61,7 @@
 	"helpText": null,
 	"helpEnabled": false,
 	"openClickTile": false,
-	"ver": "22.9.27.143",
+	"ver": "22.9.27.941",
 	"actionWebApp": "",
 	"name": "Skye Q Manager",
 	"cardWidth": "Max",
@@ -80,6 +80,7 @@
 	"roleTag": null,
 	"sapICFNode": null,
 	"actionType": "A",
+	"cockpitTile": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab",
 	"roles": []
 }

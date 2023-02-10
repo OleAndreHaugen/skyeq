@@ -7,9 +7,9 @@
 		"remote": "https://github.com/OleAndreHaugen/skyeq.git",
 		"testServers": []
 	},
-	"name": "com.neptune.skyeq",
-	"description": "Skye Q",
-	"ver": "22.11.23.1426",
+	"name": "neptunesoftware-skyeq",
+	"description": "Event Driven Handling Demo",
+	"ver": "23.2.10.1554",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -17,12 +17,6 @@
 			"application": "skyeq_client",
 			"title": "Skye Q Client",
 			"description": "Skye Q Client"
-		},
-		{
-			"id": "3134cb67-bdac-4f2a-9c32-1beb5dfcc8cf",
-			"application": "skyeq_manager",
-			"title": "Skye Q Manager",
-			"description": "Skye Q Manager"
 		}
 	],
 	"api": [
@@ -30,7 +24,7 @@
 			"id": "9da81e33-c00c-4689-87cd-997958548dfd",
 			"name": "SkyeQ",
 			"description": null,
-			"apiGroup": null
+			"apiGroup": "d5200ac2-2101-46f3-94e9-a16eb9abc199"
 		}
 	],
 	"odataSource": [],
@@ -101,7 +95,13 @@
 		}
 	],
 	"api_authentication": [],
-	"api_group": [],
+	"api_group": [
+		{
+			"id": "d5200ac2-2101-46f3-94e9-a16eb9abc199",
+			"name": "SkyeQ",
+			"description": null
+		}
+	],
 	"tile": [
 		{
 			"id": "89e3c98b-1043-4591-b71a-2ff4ed6bf36d",
@@ -168,20 +168,6 @@
 			"description": null
 		}
 	],
-	"events": [
-		{
-			"id": "e9c05829-3937-4181-aa8a-0941c70ed413",
-			"updatedAt": "2022-11-23T11:36:55.000Z",
-			"changedBy": "ole-andre.haugen@neptune-software.com",
-			"name": "SkyeQClient",
-			"description": "Client Events"
-		},
-		{
-			"id": "71d16504-ca2e-45d8-89da-bbcfe389ec97",
-			"updatedAt": "2022-11-23T11:37:03.000Z",
-			"changedBy": "ole-andre.haugen@neptune-software.com",
-			"name": "SkyeQServer",
-			"description": "Server Events"
-		}
-	]
+	"events": [],
+	"media_library": []
 }

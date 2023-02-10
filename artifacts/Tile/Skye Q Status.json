@@ -79,6 +79,7 @@
 	"roleTag": null,
 	"sapICFNode": null,
 	"actionType": "F",
+	"cockpitTile": false,
 	"package": "de916930-7bab-4416-b294-24cae145feab",
 	"roles": []
 }

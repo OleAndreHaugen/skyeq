@@ -108,7 +108,7 @@
 													"attribute": "press",
 													"grouping": "Events",
 													"value": "Anonymous Function",
-													"script": "file://event/sap.f.GridListItem/oGridListItem/press.script",
+													"script": "file://event/sap.f.GridListItem/oGridListItem/press.js",
 													"language": "javascript",
 													"translation": []
 												}
@@ -1547,7 +1547,7 @@
 									"attribute": "press",
 									"grouping": "Events",
 									"value": "Anonymous Function",
-									"script": "file://event/sap.m.Button/diaCompletedSave/press.script",
+									"script": "file://event/sap.m.Button/diaCompletedSave/press.js",
 									"language": "javascript",
 									"translation": []
 								}
@@ -1824,7 +1824,7 @@
 							"fieldName": "SkyeQ",
 							"fieldParent": "6a380c93-b57a-4244-cb13-4b3bd3440551",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/SkyeQ.script",
+							"script": "file://script/neptune.Script/Script/SkyeQ.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -1836,7 +1836,7 @@
 							"fieldName": "Init",
 							"fieldParent": "6a380c93-b57a-4244-cb13-4b3bd3440551",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/Init.script",
+							"script": "file://script/neptune.Script/Script/Init.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -1852,8 +1852,8 @@
 			"data": []
 		}
 	],
-	"componentInterface": [],
-	"ver": "22.11.23.1254",
+	"componentInterface": null,
+	"ver": "22.9.27.1014",
 	"application": "skyeq_client",
 	"title": "Skye Q Client",
 	"description": "Skye Q Client",
@@ -1873,27 +1873,29 @@
 	"ui5_uxap": false,
 	"ui5_chart": false,
 	"ui5_theme": "sap_horizon_dark",
-	"ui5_version": "1.108",
+	"ui5_version": "1.102",
 	"ui5_language": null,
-	"ui5_url": "",
+	"ui5_url": null,
 	"cus_theme": "",
-	"css": "file:///css.script",
+	"css": "file:///css.css",
 	"header": "",
 	"manifest": "",
 	"globalScript": null,
 	"deleted": false,
 	"libHighchart": false,
 	"libHighmap": false,
-	"publicAccess": false,
+	"publicAccess": true,
 	"ui5_bootstrap": false,
 	"ui5_ionic": false,
 	"useV2AppHandler": true,
 	"compilerTarget": 7,
+	"tabWidth": null,
+	"printWidth": null,
 	"apis": [
 		{
 			"id": "9da81e33-c00c-4689-87cd-997958548dfd",
 			"name": "SkyeQ",
-			"ver": "22.9.27.710"
+			"ver": "22.10.25.925"
 		}
 	],
 	"package": "de916930-7bab-4416-b294-24cae145feab"
