@@ -1,0 +1,7 @@
+if (typeof (createdAt) === "undefined" || createdAt === null) { return; }
+
+var oDateFormat = sap.ui.core.format.DateFormat.getDateTimeInstance({
+    relative: true
+});
+
+return oDateFormat.format(new Date(parseInt(createdAt)));
