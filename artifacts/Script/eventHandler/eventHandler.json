@@ -23,7 +23,7 @@
 	],
 	"apis": [],
 	"name": "eventHandler",
-	"ver": "22.9.27.947",
+	"ver": "23.2.10.1637",
 	"description": null,
 	"content": "file:///content.js",
 	"useAsGlobalScript": false,

@@ -11,7 +11,7 @@ try {
 
         case "updateQueue":
             const recUpdate = await entities.skyeq_master.save(payload.data);
-            EventRes.data = await entities.skyeq_master.findOne(recUpdate);
+            EventRes.data = await entities.skyeq_master.findOne({ id: recUpdate.id });
             break;
 
         case "leaveQueue":
